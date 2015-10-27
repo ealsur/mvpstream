@@ -1,0 +1,19 @@
+﻿@model MVPStream.Models.Entry
+@{
+    var urlEncoded = System.Uri.EscapeUriString(Model.Url);
+    var titleEncoded = System.Uri.EscapeDataString(Model.Titulo);
+    var id = Guid.NewGuid();
+}
+<button id="@id" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+  <i class="material-icons">share</i>
+</button>
+
+<ul class="mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect" for="@id">
+<li class="mdl-menu_item"><a title="Compartir en Facebook" target="_blank" href ="https://www.facebook.com/sharer/sharer.php?u=@urlEncoded"><img src="https://www.gstatic.com/images/icons/material/system/2x/post_facebook_black_24dp.png"/></a></li>
+
+<li class="mdl-menu_item"><a title="Compartir en Twitter" target="_blank" href="https://twitter.com/intent/tweet/?text=@titleEncoded&url=@urlEncoded"><img src="https://www.gstatic.com/images/icons/material/system/2x/post_twitter_black_24dp.png"/></a></li>
+
+<li class="mdl-menu_item"><a title="Compartir en Google+" target="_blank" href="https://plus.google.com/share?url=@urlEncoded"><img src="https://www.gstatic.com/images/icons/material/system/2x/post_gplus_black_24dp.png"/></a></li>
+
+<li class="mdl-menu_item"><a title="Compartir en Linkedin" target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=@urlEncoded&title=@titleEncoded&source=https%3A%2F%2Fmvpstream.azurewebsites.net%2F"><img src="https://www.gstatic.com/images/icons/material/system/2x/post_linkedin_black_24dp.png"/></a></li>
+</ul>

@@ -1,0 +1,36 @@
+﻿@model MVPStream.Models.BusquedaViewModel
+@{
+    ViewBag.Title = "Videos de los más destacados Microsoft MVP";
+}
+@section meta{
+    <meta name="og:image" content="@Url.Content("~/Content/images/logo.png")" />
+    <meta name="description" content="Videos de los más destacados Microsoft MVP" />
+}
+<div class="hero mdl-typography--text-center">
+        <h1>Todos los videos de los más destacados Microsoft MVP</h1>
+</div>
+
+<div class="container">
+    <div class="mdl-grid">
+            @foreach (var entry in Model.Publicaciones)
+            {
+                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-tablet mdl-cell--4-phone">
+                    @Html.DisplayFor(model => entry)
+                </div>
+            }
+    </div>
+    <div class="clearfix"></div>
+    <nav class="paginatewrapper">
+            @if (Model.Page > 1)
+            {
+                 <a href="@Url.Action("Videos", new {  page = Model.Page - 1 })"><button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect prev paginate">
+                Anteriores
+            </button></a>
+            }
+             <a href="@Url.Action("Videos", new {  page = Model.Page + 1 })"><button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect next paginate">
+                Más resultados
+            </button></a>
+            
+    </nav>
+    <div class="clearfix"></div>
+</div>

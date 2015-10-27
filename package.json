@@ -1,0 +1,20 @@
+{
+  "version": "1.0.0",
+  "name": "MVPStream",
+  "author": {
+    "name": "Matías Quaranta",
+    "email": "ealsur@hotmail.com",
+    "url": "http://www.ealsur.com.ar"
+  },
+  "dependencies": {
+    "del": "1.2.0",
+    "gulp": "3.9.0",
+    "gulp-bower": "0.0.10",
+    "gulp-concat": "2.5.2",
+    "gulp-cssmin": "0.1.7",
+    "gulp-uglify": "1.2.0",
+    "gulp-ignore": "^1.2.1",
+    "main-bower-files": "2.8.0"
+  }
+  
+}

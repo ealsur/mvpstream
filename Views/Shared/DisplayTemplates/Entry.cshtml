@@ -1,0 +1,35 @@
+﻿@using MVPStream.Extensions;
+@model MVPStream.Models.Entry
+@{
+    var hasImage = !string.IsNullOrEmpty(Model.Imagen);           
+}
+
+<div class="mdl-card mdl-shadow--2dp  @(hasImage?"with-image":string.Empty)" itemscope itemtype="http://schema.org/Article">
+    <meta itemprop="author" content="@Model.PublisherNombre" />
+    <meta itemprop="description" content="@Model.Descripcion.StripHtml()" />
+    <meta itemprop="copyrightHolder" content="@Model.PublisherNombre" />
+    <meta itemprop="isBasedOnUrl" content="@Model.Url" />
+    <meta itemprop="url" content="@Model.Url" />
+    <meta itemprop="keywords" content="@string.Join(", ",Model.Tags)" />
+    
+    <div class="mdl-card__title mdl-card--border">
+        <div class="mdl-subtitle-text" itemprop="datePublished"><i class="material-icons">event</i> @Model.Fecha.ToString("dd/MM/yyyy") </div>
+         <a class="mdl-card__title-text" href="@Model.Url" target="_blank" title="@Model.Titulo" class="externalLink" itemprop="name">@Model.Titulo</a>
+    </div>
+    @if(hasImage)
+    {
+        
+        <a href="@Model.Url" target="_blank" title="@Model.Titulo"><div class="mdl-card__media" style="background-image:url('@Model.Imagen')">
+            <meta itemprop="thumbnailUrl" content="@Model.Imagen" />
+        </div></a>
+    }
+    else{
+        <div class="mdl-card__supporting-text">
+         <p>@Model.Descripcion.StripHtml().EllipsisWhenLongerThan(250)</p>
+        </div>
+    }
+    <div class="mdl-card__actions mdl-card--border">
+        <div><i class="material-icons">account_circle</i></div><div class="author"><a href="@Url.Action("Index", "Mvp", new {id=Model.PublisherId })" title="Todas las publicaciones de @Model.PublisherNombre">@Model.PublisherNombre</a></div>  @Html.Partial("_Social", Model)
+    </div>
+</div>
+

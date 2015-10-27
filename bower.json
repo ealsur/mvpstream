@@ -1,0 +1,9 @@
+{
+  "name": "MVPStream",
+  "private": true,
+  "dependencies": {
+    "angular": "*",
+    "material-design-lite":"1.0.5",
+    "layzr.js":"^1.4.1"
+  }
+}

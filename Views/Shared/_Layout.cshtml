@@ -1,0 +1,89 @@
+﻿@addTagHelper "*, Microsoft.AspNet.Mvc.TagHelpers"
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="content-language" content="es">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="@(string.Join(", ",MVPStream.Models.Especialidades.All.Select(x=>x.GetNombre()).ToArray()))">
+    <meta name="norton-safeweb-site-verification" content="j4sxt77z5r0bjdr0dtop1kxd9doxbh3j-ihyor4qov5-oeobeyovmwnrehhonoqsz51oubc1ltutqg91o4gxyi8libtccuj1dbe48-0arefktgmd8z0evfa93xb0biub" />
+    @RenderSection("meta", required: false)
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.light_blue-pink.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/dist/css/bundle/front.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    @RenderSection("css", required: false)  
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-61730164-1', 'auto');
+        ga('require', 'linkid', 'linkid.js');
+        ga('send', 'pageview');
+    </script>
+</head>
+<body>
+   <div class="mdl-layout mdl-js-layout mdl-layout--overlay-drawer-button">
+  <header class="mdl-layout__header mdl-layout__header--waterfall">
+    <div class="mdl-layout__header-row">
+      <span class="mdl-layout-title">MVPStream - Todo el contenido de Microsoft MVPs</span>
+      <div class="mdl-layout-spacer"></div>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                  mdl-textfield--floating-label mdl-textfield--align-right">
+        <label class="mdl-button mdl-js-button mdl-button--icon"
+               for="waterfall-exp">
+          <i class="material-icons">search</i>
+        </label>
+        <div class="mdl-textfield__expandable-holder">
+            <form asp-controller="Entries" asp-action="Busqueda" method="get" asp-antiforgery="false">
+          <input class="mdl-textfield__input" type="text" name="q"
+                 id="waterfall-exp" />
+                 </form>
+        </div>
+      </div>
+    </div>
+  </header>
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title"><a href="/"><img alt="MVPStream" src="@Url.Content("~/content/images/logo.png")"/></a></span>
+        <nav class="mdl-navigation">
+            @foreach (var especialidad in MVPStream.Models.Especialidades.All)
+            {
+                <a class="mdl-navigation__link" href="/busqueda?q=@System.Uri.EscapeUriString(especialidad.GetNombre())">@especialidad.GetNombre()</a>
+            }
+        </nav>
+      </div>
+      <main class="mdl-layout__content">
+          @RenderBody()
+        <footer class="mdl-grid">
+          <div class="mdl-cell mdl-cell--4-col mdl-cell--hide-phone">
+             <img src="@Url.Content("~/Content/images/MVPHorizontal.png")" alt="Microsoft MVP"/>
+          </div>
+          <div class="mdl-cell mdl-cell--4-col mdl-cell--hide-phone">
+              <img src="@Url.Content("~/Content/images/PoweredByAzure.png")" alt="Powered by Azure"/>
+          </div>
+          <div class="mdl-cell mdl-cell--4-col">
+              MVPStream &copy; <a href="http://www.ealsur.com.ar" target="_blank">Matías Quaranta</a> @DateTime.Now.Year <br /> Los contenidos con &copy; de sus respectivos dueños
+          </div>
+        </footer>
+      </main>
+      
+    </div>
+    <script types="text/javascript" src="~/dist/js/bundle/front.js"></script>
+    @RenderSection("scripts", required: false)
+    <script type="application/ld+json">
+        {
+        "@@context": "http://schema.org",
+        "@@type": "WebSite",
+        "url": "http://mvpstream.azurewebsites.net/",
+        "potentialAction": {
+        "@@type": "SearchAction",
+        "target": "http://mvpstream.azurewebsites.net/busqueda?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+        }
+        }
+    </script>
+</body>
+</html>

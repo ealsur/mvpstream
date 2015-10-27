@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Contenido no encontrado";
+}
+<div class="container-fluid error">
+    <div class="container">
+        <h1>:-( <small>No pude encontrar lo que estabas buscando...</small></h1>
+
+        <p>
+            pero te recomiendo que pruebes con <br />
+            @foreach (var especialidad in MVPStream.Models.Especialidades.All)
+            {
+                <a href="/busqueda?q=@System.Uri.EscapeUriString(especialidad.GetNombre())">@especialidad.GetNombre()</a>
+            }
+        </p>
+    </div>
+</div>
