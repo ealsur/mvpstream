@@ -65,6 +65,17 @@ namespace MVPStream.Controllers
                 }
                 TextWriter.WriteEndElement();
             }
+            foreach(var item in model.UltimosVideos)
+            {
+                TextWriter.WriteStartElement("item");
+                TextWriter.WriteElementString("title", item.Titulo);
+                TextWriter.WriteElementString("description", item.Descripcion);
+                TextWriter.WriteElementString("link", item.Url);
+                foreach(var tag in item.Tags){
+                    TextWriter.WriteElementString("category", tag);
+                }
+                TextWriter.WriteEndElement();
+            }
             TextWriter.WriteEndElement();
             TextWriter.WriteEndElement();
             TextWriter.WriteEndDocument();
