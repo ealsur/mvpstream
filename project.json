@@ -30,9 +30,6 @@
         "Newtonsoft.Json": "7.0.1",
         "Microsoft.Azure.Search": "0.13.0-preview"
     },
-    "scripts": {
-    "postrestore": [ "npm install", "bower install","gulp default" ]
-},
     "commands": {
        "web": "Microsoft.AspNet.Server.Kestrel"
     },

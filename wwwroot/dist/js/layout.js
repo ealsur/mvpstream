@@ -1,0 +1,1 @@
+!function(){componentHandler.registerUpgradedCallback("MaterialLayout",function(){new Layzr})}();
