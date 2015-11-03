@@ -1,9 +1,5 @@
-using System;
-using System.Threading.Tasks;
 using Microsoft.AspNet.Builder;
-using Microsoft.AspNet.Diagnostics;
-using Microsoft.AspNet.Hosting;
-using Microsoft.Framework.DependencyInjection; 
+using Microsoft.Framework.DependencyInjection;
 
 
 

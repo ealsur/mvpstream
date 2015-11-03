@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace MVPStream.Models
+﻿namespace MVPStream.Models
 {
     public class PagedViewModel
     {
