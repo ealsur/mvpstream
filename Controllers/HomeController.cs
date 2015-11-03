@@ -1,5 +1,4 @@
-﻿using MVPStream.Models;
-using MVPStream.Services;
+﻿using MVPStream.Services;
 using Microsoft.AspNet.Mvc;
 
 namespace MVPStream.Controllers
@@ -10,11 +9,6 @@ namespace MVPStream.Controllers
         public IActionResult Index()
         {
             return View(HomeService.GetModel());
-        }
-
-        public IActionResult Nav()
-        {
-            return PartialView(Especialidades.All);
         }
     }
 }
