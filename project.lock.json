@@ -2,7 +2,7 @@
   "locked": false,
   "version": 2,
   "targets": {
-    "DNX,Version=v4.5.1": {
+    "DNX,Version=v4.6": {
       "EnterpriseLibrary.TransientFaultHandling/6.0.1304": {
         "type": "package",
         "frameworkAssemblies": [
@@ -1641,11 +1641,15 @@
           "System.Runtime": "4.0.0",
           "System.Runtime.Extensions": "4.0.0"
         },
+        "frameworkAssemblies": [
+          "mscorlib",
+          "System.Numerics"
+        ],
         "compile": {
-          "ref/dotnet/System.Numerics.Vectors.dll": {}
+          "ref/net46/System.Numerics.Vectors.dll": {}
         },
         "runtime": {
-          "lib/dotnet/System.Numerics.Vectors.dll": {}
+          "lib/net46/System.Numerics.Vectors.dll": {}
         }
       },
       "System.Reflection/4.0.0": {
@@ -1764,7 +1768,7 @@
         }
       }
     },
-    "DNX,Version=v4.5.1/win7-x86": {
+    "DNX,Version=v4.6/win7-x86": {
       "EnterpriseLibrary.TransientFaultHandling/6.0.1304": {
         "type": "package",
         "frameworkAssemblies": [
@@ -3406,11 +3410,15 @@
           "System.Runtime": "4.0.0",
           "System.Runtime.Extensions": "4.0.0"
         },
+        "frameworkAssemblies": [
+          "mscorlib",
+          "System.Numerics"
+        ],
         "compile": {
-          "ref/dotnet/System.Numerics.Vectors.dll": {}
+          "ref/net46/System.Numerics.Vectors.dll": {}
         },
         "runtime": {
-          "lib/dotnet/System.Numerics.Vectors.dll": {}
+          "lib/net46/System.Numerics.Vectors.dll": {}
         }
       },
       "System.Reflection/4.0.0": {
@@ -3529,7 +3537,7 @@
         }
       }
     },
-    "DNX,Version=v4.5.1/win7-x64": {
+    "DNX,Version=v4.6/win7-x64": {
       "EnterpriseLibrary.TransientFaultHandling/6.0.1304": {
         "type": "package",
         "frameworkAssemblies": [
@@ -5171,11 +5179,15 @@
           "System.Runtime": "4.0.0",
           "System.Runtime.Extensions": "4.0.0"
         },
+        "frameworkAssemblies": [
+          "mscorlib",
+          "System.Numerics"
+        ],
         "compile": {
-          "ref/dotnet/System.Numerics.Vectors.dll": {}
+          "ref/net46/System.Numerics.Vectors.dll": {}
         },
         "runtime": {
-          "lib/dotnet/System.Numerics.Vectors.dll": {}
+          "lib/net46/System.Numerics.Vectors.dll": {}
         }
       },
       "System.Reflection/4.0.0": {
@@ -7503,6 +7515,6 @@
       "Newtonsoft.Json >= 7.0.1",
       "Microsoft.Azure.Search >= 0.13.0-preview"
     ],
-    "DNX,Version=v4.5.1": []
+    "DNX,Version=v4.6": []
   }
 }
