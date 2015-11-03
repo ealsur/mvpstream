@@ -805,26 +805,6 @@
           "lib/dnx451/Microsoft.AspNet.Server.Kestrel.dll": {}
         }
       },
-      "Microsoft.AspNet.Server.WebListener/1.0.0-beta8": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNet.Hosting": "1.0.0-beta8",
-          "Microsoft.Net.Http.Headers": "1.0.0-beta8",
-          "Microsoft.Net.Http.Server": "1.0.0-beta8"
-        },
-        "frameworkAssemblies": [
-          "Microsoft.CSharp",
-          "mscorlib",
-          "System",
-          "System.Core"
-        ],
-        "compile": {
-          "lib/dnx451/Microsoft.AspNet.Server.WebListener.dll": {}
-        },
-        "runtime": {
-          "lib/dnx451/Microsoft.AspNet.Server.WebListener.dll": {}
-        }
-      },
       "Microsoft.AspNet.StaticFiles/1.0.0-beta8": {
         "type": "package",
         "dependencies": {
@@ -1482,41 +1462,6 @@
         },
         "runtime": {
           "lib/dnx451/Microsoft.Net.Http.Headers.dll": {}
-        }
-      },
-      "Microsoft.Net.Http.Server/1.0.0-beta8": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Framework.Logging.Abstractions": "1.0.0-beta8",
-          "Microsoft.Framework.Primitives": "1.0.0-beta8",
-          "Microsoft.Net.WebSockets": "1.0.0-beta8"
-        },
-        "frameworkAssemblies": [
-          "Microsoft.CSharp",
-          "mscorlib",
-          "System",
-          "System.Core"
-        ],
-        "compile": {
-          "lib/dnx451/Microsoft.Net.Http.Server.dll": {}
-        },
-        "runtime": {
-          "lib/dnx451/Microsoft.Net.Http.Server.dll": {}
-        }
-      },
-      "Microsoft.Net.WebSockets/1.0.0-beta8": {
-        "type": "package",
-        "frameworkAssemblies": [
-          "Microsoft.CSharp",
-          "mscorlib",
-          "System",
-          "System.Core"
-        ],
-        "compile": {
-          "lib/dnx451/Microsoft.Net.WebSockets.dll": {}
-        },
-        "runtime": {
-          "lib/dnx451/Microsoft.Net.WebSockets.dll": {}
         }
       },
       "Microsoft.Spatial/6.10.0": {
@@ -2574,26 +2519,6 @@
           "runtimes/win7-x86/native/libuv.dll": {}
         }
       },
-      "Microsoft.AspNet.Server.WebListener/1.0.0-beta8": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNet.Hosting": "1.0.0-beta8",
-          "Microsoft.Net.Http.Headers": "1.0.0-beta8",
-          "Microsoft.Net.Http.Server": "1.0.0-beta8"
-        },
-        "frameworkAssemblies": [
-          "Microsoft.CSharp",
-          "mscorlib",
-          "System",
-          "System.Core"
-        ],
-        "compile": {
-          "lib/dnx451/Microsoft.AspNet.Server.WebListener.dll": {}
-        },
-        "runtime": {
-          "lib/dnx451/Microsoft.AspNet.Server.WebListener.dll": {}
-        }
-      },
       "Microsoft.AspNet.StaticFiles/1.0.0-beta8": {
         "type": "package",
         "dependencies": {
@@ -3251,41 +3176,6 @@
         },
         "runtime": {
           "lib/dnx451/Microsoft.Net.Http.Headers.dll": {}
-        }
-      },
-      "Microsoft.Net.Http.Server/1.0.0-beta8": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Framework.Logging.Abstractions": "1.0.0-beta8",
-          "Microsoft.Framework.Primitives": "1.0.0-beta8",
-          "Microsoft.Net.WebSockets": "1.0.0-beta8"
-        },
-        "frameworkAssemblies": [
-          "Microsoft.CSharp",
-          "mscorlib",
-          "System",
-          "System.Core"
-        ],
-        "compile": {
-          "lib/dnx451/Microsoft.Net.Http.Server.dll": {}
-        },
-        "runtime": {
-          "lib/dnx451/Microsoft.Net.Http.Server.dll": {}
-        }
-      },
-      "Microsoft.Net.WebSockets/1.0.0-beta8": {
-        "type": "package",
-        "frameworkAssemblies": [
-          "Microsoft.CSharp",
-          "mscorlib",
-          "System",
-          "System.Core"
-        ],
-        "compile": {
-          "lib/dnx451/Microsoft.Net.WebSockets.dll": {}
-        },
-        "runtime": {
-          "lib/dnx451/Microsoft.Net.WebSockets.dll": {}
         }
       },
       "Microsoft.Spatial/6.10.0": {
@@ -4343,26 +4233,6 @@
           "runtimes/win7-x64/native/libuv.dll": {}
         }
       },
-      "Microsoft.AspNet.Server.WebListener/1.0.0-beta8": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNet.Hosting": "1.0.0-beta8",
-          "Microsoft.Net.Http.Headers": "1.0.0-beta8",
-          "Microsoft.Net.Http.Server": "1.0.0-beta8"
-        },
-        "frameworkAssemblies": [
-          "Microsoft.CSharp",
-          "mscorlib",
-          "System",
-          "System.Core"
-        ],
-        "compile": {
-          "lib/dnx451/Microsoft.AspNet.Server.WebListener.dll": {}
-        },
-        "runtime": {
-          "lib/dnx451/Microsoft.AspNet.Server.WebListener.dll": {}
-        }
-      },
       "Microsoft.AspNet.StaticFiles/1.0.0-beta8": {
         "type": "package",
         "dependencies": {
@@ -5020,41 +4890,6 @@
         },
         "runtime": {
           "lib/dnx451/Microsoft.Net.Http.Headers.dll": {}
-        }
-      },
-      "Microsoft.Net.Http.Server/1.0.0-beta8": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Framework.Logging.Abstractions": "1.0.0-beta8",
-          "Microsoft.Framework.Primitives": "1.0.0-beta8",
-          "Microsoft.Net.WebSockets": "1.0.0-beta8"
-        },
-        "frameworkAssemblies": [
-          "Microsoft.CSharp",
-          "mscorlib",
-          "System",
-          "System.Core"
-        ],
-        "compile": {
-          "lib/dnx451/Microsoft.Net.Http.Server.dll": {}
-        },
-        "runtime": {
-          "lib/dnx451/Microsoft.Net.Http.Server.dll": {}
-        }
-      },
-      "Microsoft.Net.WebSockets/1.0.0-beta8": {
-        "type": "package",
-        "frameworkAssemblies": [
-          "Microsoft.CSharp",
-          "mscorlib",
-          "System",
-          "System.Core"
-        ],
-        "compile": {
-          "lib/dnx451/Microsoft.Net.WebSockets.dll": {}
-        },
-        "runtime": {
-          "lib/dnx451/Microsoft.Net.WebSockets.dll": {}
         }
       },
       "Microsoft.Spatial/6.10.0": {
@@ -5892,20 +5727,6 @@
         "thirdpartynotices.txt"
       ]
     },
-    "Microsoft.AspNet.Server.WebListener/1.0.0-beta8": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "+QlOCQXaV2gRbwMsePs3HFuDefY8gv5H0NQA5mymb41y0/T1jvv7gdJQRkSSKRUy3G2vYf3Ts86ICMpYWTsPrA==",
-      "files": [
-        "lib/dnx451/Microsoft.AspNet.Server.WebListener.dll",
-        "lib/dnx451/Microsoft.AspNet.Server.WebListener.xml",
-        "lib/dnxcore50/Microsoft.AspNet.Server.WebListener.dll",
-        "lib/dnxcore50/Microsoft.AspNet.Server.WebListener.xml",
-        "Microsoft.AspNet.Server.WebListener.1.0.0-beta8.nupkg",
-        "Microsoft.AspNet.Server.WebListener.1.0.0-beta8.nupkg.sha512",
-        "Microsoft.AspNet.Server.WebListener.nuspec"
-      ]
-    },
     "Microsoft.AspNet.StaticFiles/1.0.0-beta8": {
       "type": "package",
       "serviceable": true,
@@ -6722,38 +6543,6 @@
         "Microsoft.Net.Http.Headers.nuspec"
       ]
     },
-    "Microsoft.Net.Http.Server/1.0.0-beta8": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "/ee29vfIeGjw1a3CRHO4iFJozzYFQZ+NJxDaDhz9FMAervPSZtJ5em5JQuD7UKBxG1D8ILkZAwko91JH3TtMbg==",
-      "files": [
-        "lib/dnx451/Microsoft.Net.Http.Server.dll",
-        "lib/dnx451/Microsoft.Net.Http.Server.xml",
-        "lib/dnxcore50/Microsoft.Net.Http.Server.dll",
-        "lib/dnxcore50/Microsoft.Net.Http.Server.xml",
-        "lib/net451/Microsoft.Net.Http.Server.dll",
-        "lib/net451/Microsoft.Net.Http.Server.xml",
-        "Microsoft.Net.Http.Server.1.0.0-beta8.nupkg",
-        "Microsoft.Net.Http.Server.1.0.0-beta8.nupkg.sha512",
-        "Microsoft.Net.Http.Server.nuspec"
-      ]
-    },
-    "Microsoft.Net.WebSockets/1.0.0-beta8": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "V/TFJrBBX7k71vkZjg8bqRQi2oB751f6Dc0JtAkMUYNz2BCUDVaT0ilcgviid7TDBIJuRLV8za17T3HjSHVo5g==",
-      "files": [
-        "lib/dnx451/Microsoft.Net.WebSockets.dll",
-        "lib/dnx451/Microsoft.Net.WebSockets.xml",
-        "lib/dnxcore50/Microsoft.Net.WebSockets.dll",
-        "lib/dnxcore50/Microsoft.Net.WebSockets.xml",
-        "lib/net451/Microsoft.Net.WebSockets.dll",
-        "lib/net451/Microsoft.Net.WebSockets.xml",
-        "Microsoft.Net.WebSockets.1.0.0-beta8.nupkg",
-        "Microsoft.Net.WebSockets.1.0.0-beta8.nupkg.sha512",
-        "Microsoft.Net.WebSockets.nuspec"
-      ]
-    },
     "Microsoft.Spatial/6.10.0": {
       "type": "package",
       "sha512": "f5giij2hCAMwRTDwcaVPDqzNlCmCGK2siwN1R0bvlF0EqKS+9TJpc/8dLUdx35tSc5TO1zknRAwuxIljnIdZ+Q==",
@@ -7506,7 +7295,6 @@
       "Microsoft.AspNet.Diagnostics >= 1.0.0-beta8",
       "Microsoft.AspNet.StaticFiles >= 1.0.0-beta8",
       "Microsoft.AspNet.Server.Kestrel >= 1.0.0-beta8",
-      "Microsoft.AspNet.Server.WebListener >= 1.0.0-beta8",
       "MVPStream.Models >= 1.0.3",
       "Microsoft.AspNet.WebApi.Client >= 5.2.3",
       "Microsoft.Azure.DocumentDB >= 1.5.0",
