@@ -24,7 +24,7 @@
         "Microsoft.AspNet.Diagnostics":"1.0.0-beta8",
         "Microsoft.AspNet.StaticFiles": "1.0.0-beta8",
         "Microsoft.AspNet.Server.Kestrel": "1.0.0-beta8",   
-        "MVPStream.Models": "1.0.3",
+        "MVPStream.Models": "2.0.0",
         "Microsoft.AspNet.WebApi.Client":"5.2.3",
         "Microsoft.Azure.DocumentDB":"1.5.0",
         "Microsoft.Azure.DocumentDB.TransientFaultHandling": "1.2.0",
@@ -36,6 +36,6 @@
        "web": "Microsoft.AspNet.Server.Kestrel"
     },
     "frameworks": {
-        "dnx46":{} 
+        "dnx46":{}
     }
 }

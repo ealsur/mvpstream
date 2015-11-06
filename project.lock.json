@@ -1502,13 +1502,22 @@
           }
         }
       },
-      "MVPStream.Models/1.0.3": {
+      "MVPStream.Models/2.0.0": {
         "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.10"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
         "compile": {
-          "lib/net45/MVPStream.Models.dll": {}
+          "lib/dnx46/MVPStream.Models.dll": {}
         },
         "runtime": {
-          "lib/net45/MVPStream.Models.dll": {}
+          "lib/dnx46/MVPStream.Models.dll": {}
         }
       },
       "Newtonsoft.Json/7.0.1": {
@@ -1520,13 +1529,13 @@
           "lib/net45/Newtonsoft.Json.dll": {}
         }
       },
-      "System.Collections/4.0.0": {
+      "System.Collections/4.0.10": {
         "type": "package",
         "compile": {
-          "ref/net45/_._": {}
+          "ref/net46/_._": {}
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net46/_._": {}
         }
       },
       "System.Collections.Immutable/1.1.36": {
@@ -3216,13 +3225,22 @@
           }
         }
       },
-      "MVPStream.Models/1.0.3": {
+      "MVPStream.Models/2.0.0": {
         "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.10"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
         "compile": {
-          "lib/net45/MVPStream.Models.dll": {}
+          "lib/dnx46/MVPStream.Models.dll": {}
         },
         "runtime": {
-          "lib/net45/MVPStream.Models.dll": {}
+          "lib/dnx46/MVPStream.Models.dll": {}
         }
       },
       "Newtonsoft.Json/7.0.1": {
@@ -3234,13 +3252,13 @@
           "lib/net45/Newtonsoft.Json.dll": {}
         }
       },
-      "System.Collections/4.0.0": {
+      "System.Collections/4.0.10": {
         "type": "package",
         "compile": {
-          "ref/net45/_._": {}
+          "ref/net46/_._": {}
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net46/_._": {}
         }
       },
       "System.Collections.Immutable/1.1.36": {
@@ -4930,13 +4948,22 @@
           }
         }
       },
-      "MVPStream.Models/1.0.3": {
+      "MVPStream.Models/2.0.0": {
         "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.10"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
         "compile": {
-          "lib/net45/MVPStream.Models.dll": {}
+          "lib/dnx46/MVPStream.Models.dll": {}
         },
         "runtime": {
-          "lib/net45/MVPStream.Models.dll": {}
+          "lib/dnx46/MVPStream.Models.dll": {}
         }
       },
       "Newtonsoft.Json/7.0.1": {
@@ -4948,13 +4975,13 @@
           "lib/net45/Newtonsoft.Json.dll": {}
         }
       },
-      "System.Collections/4.0.0": {
+      "System.Collections/4.0.10": {
         "type": "package",
         "compile": {
-          "ref/net45/_._": {}
+          "ref/net46/_._": {}
         },
         "runtime": {
-          "lib/net45/_._": {}
+          "lib/net46/_._": {}
         }
       },
       "System.Collections.Immutable/1.1.36": {
@@ -6563,13 +6590,16 @@
         "Microsoft.Spatial.nuspec"
       ]
     },
-    "MVPStream.Models/1.0.3": {
+    "MVPStream.Models/2.0.0": {
       "type": "package",
-      "sha512": "mlhA678FWkxZ4RIKVApPktURsssXTyYOcSGOg0M7+i3PtQj0ehokz5RqC5Es5dX/HJ4yD4sEd97oEEkuaiFM3A==",
+      "sha512": "DmNlhBnJ/hDLYhmJ7xBUbvCLDWB0O3y3tLonPrpMqN9hMm9JEOZ9mcE/r4Fy1FRYOUomwZVCHGsQ4OolGCqWQg==",
       "files": [
-        "lib/net45/MVPStream.Models.dll",
-        "MVPStream.Models.1.0.3.nupkg",
-        "MVPStream.Models.1.0.3.nupkg.sha512",
+        "lib/dnx46/MVPStream.Models.dll",
+        "lib/dnx46/MVPStream.Models.xml",
+        "lib/dnxcore50/MVPStream.Models.dll",
+        "lib/dnxcore50/MVPStream.Models.xml",
+        "MVPStream.Models.2.0.0.nupkg",
+        "MVPStream.Models.2.0.0.nupkg.sha512",
         "MVPStream.Models.nuspec"
       ]
     },
@@ -6595,19 +6625,18 @@
         "tools/install.ps1"
       ]
     },
-    "System.Collections/4.0.0": {
+    "System.Collections/4.0.10": {
       "type": "package",
-      "sha512": "i2vsGDIEbWdHcUSNDPKZP/ZWod6o740el7mGTCy0dqbCxQh74W4QoC+klUwPEtGEFuvzJ7bJgvwJqscosVNyZQ==",
+      "serviceable": true,
+      "sha512": "ux6ilcZZjV/Gp7JEZpe+2V1eTueq6NuoGRM3eZCFuPM25hLVVgCRuea6STW8hvqreIOE59irJk5/ovpA5xQipw==",
       "files": [
+        "lib/DNXCore50/System.Collections.dll",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
-        "lib/net45/_._",
-        "lib/win8/_._",
-        "lib/wp80/_._",
-        "lib/wpa81/_._",
+        "lib/net46/_._",
+        "lib/netcore50/System.Collections.dll",
         "lib/xamarinios10/_._",
         "lib/xamarinmac20/_._",
-        "License.rtf",
         "ref/dotnet/de/System.Collections.xml",
         "ref/dotnet/es/System.Collections.xml",
         "ref/dotnet/fr/System.Collections.xml",
@@ -6621,25 +6650,12 @@
         "ref/dotnet/zh-hant/System.Collections.xml",
         "ref/MonoAndroid10/_._",
         "ref/MonoTouch10/_._",
-        "ref/net45/_._",
-        "ref/netcore50/de/System.Collections.xml",
-        "ref/netcore50/es/System.Collections.xml",
-        "ref/netcore50/fr/System.Collections.xml",
-        "ref/netcore50/it/System.Collections.xml",
-        "ref/netcore50/ja/System.Collections.xml",
-        "ref/netcore50/ko/System.Collections.xml",
-        "ref/netcore50/ru/System.Collections.xml",
-        "ref/netcore50/System.Collections.dll",
-        "ref/netcore50/System.Collections.xml",
-        "ref/netcore50/zh-hans/System.Collections.xml",
-        "ref/netcore50/zh-hant/System.Collections.xml",
-        "ref/win8/_._",
-        "ref/wp80/_._",
-        "ref/wpa81/_._",
+        "ref/net46/_._",
         "ref/xamarinios10/_._",
         "ref/xamarinmac20/_._",
-        "System.Collections.4.0.0.nupkg",
-        "System.Collections.4.0.0.nupkg.sha512",
+        "runtimes/win8-aot/lib/netcore50/System.Collections.dll",
+        "System.Collections.4.0.10.nupkg",
+        "System.Collections.4.0.10.nupkg.sha512",
         "System.Collections.nuspec"
       ]
     },
@@ -7295,7 +7311,7 @@
       "Microsoft.AspNet.Diagnostics >= 1.0.0-beta8",
       "Microsoft.AspNet.StaticFiles >= 1.0.0-beta8",
       "Microsoft.AspNet.Server.Kestrel >= 1.0.0-beta8",
-      "MVPStream.Models >= 1.0.3",
+      "MVPStream.Models >= 2.0.0",
       "Microsoft.AspNet.WebApi.Client >= 5.2.3",
       "Microsoft.Azure.DocumentDB >= 1.5.0",
       "Microsoft.Azure.DocumentDB.TransientFaultHandling >= 1.2.0",
