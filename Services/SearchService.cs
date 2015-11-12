@@ -52,6 +52,7 @@ namespace MVPStream.Services
             {
                 sp.OrderBy = orderBy.Split(',');
             }
+            sp.IncludeTotalResultCount = true;
             var results = indexClient.Documents.Search(searchText, sp);
             var model = new SearchResults() {  };
             model.Entries = results.Select(x=>new Entry(){
@@ -68,7 +69,7 @@ namespace MVPStream.Services
                     Titulo = (string)x.Document["Titulo"],
                     Url = (string)x.Document["Url"]
             }).ToList();
-            model.Count = model.Entries.Count();
+            model.Count = results.Count.Value;
             return model;
         }
     }
