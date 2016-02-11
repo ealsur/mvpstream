@@ -55,7 +55,8 @@ namespace MVPStream.Services
             sp.IncludeTotalResultCount = true;
             var results = indexClient.Documents.Search(searchText, sp);
             var model = new SearchResults() {  };
-            model.Entries = results.Select(x=>new Entry(){
+            
+            model.Entries = results.Results.Select(x=>new Entry(){
                  id = (string)x.Document["id"],
                     Descripcion = (string)x.Document["Descripcion"],
                     Fecha = ((DateTimeOffset)x.Document["Fecha"]).DateTime,

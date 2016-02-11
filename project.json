@@ -30,7 +30,7 @@
         "Microsoft.Azure.DocumentDB.TransientFaultHandling": "1.2.0",
         "EnterpriseLibrary.TransientFaultHandling": "6.0.1304.0",
         "Newtonsoft.Json": "7.0.1",
-        "Microsoft.Azure.Search": "0.13.0-preview"
+        "Microsoft.Azure.Search": "1.1.0"
     },
     "commands": {
        "web": "Microsoft.AspNet.Server.Kestrel"

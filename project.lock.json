@@ -15,22 +15,6 @@
           "lib/portable-net45+win+wp8/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.dll": {}
         }
       },
-      "Hyak.Common/1.0.2": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Bcl": "1.1.9",
-          "Microsoft.Bcl.Async": "1.0.168",
-          "Microsoft.Bcl.Build": "1.0.14",
-          "Microsoft.Net.Http": "2.2.22",
-          "Newtonsoft.Json": "6.0.4"
-        },
-        "compile": {
-          "lib/net45/Hyak.Common.dll": {}
-        },
-        "runtime": {
-          "lib/net45/Hyak.Common.dll": {}
-        }
-      },
       "Microsoft.AspNet.Antiforgery/1.0.0-rc1-final": {
         "type": "package",
         "dependencies": {
@@ -862,31 +846,6 @@
           "lib/net451/Microsoft.AspNet.WebUtilities.dll": {}
         }
       },
-      "Microsoft.Azure.Common/2.0.4": {
-        "type": "package",
-        "dependencies": {
-          "Hyak.Common": "1.0.2",
-          "Microsoft.Azure.Common.Dependencies": "1.0.0"
-        },
-        "compile": {
-          "lib/net45/Microsoft.Azure.Common.dll": {},
-          "lib/net45/Microsoft.Azure.Common.NetFramework.dll": {}
-        },
-        "runtime": {
-          "lib/net45/Microsoft.Azure.Common.dll": {},
-          "lib/net45/Microsoft.Azure.Common.NetFramework.dll": {}
-        }
-      },
-      "Microsoft.Azure.Common.Dependencies/1.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Bcl": "1.1.9",
-          "Microsoft.Bcl.Async": "1.0.168",
-          "Microsoft.Bcl.Build": "1.0.14",
-          "Microsoft.Net.Http": "2.2.22",
-          "Newtonsoft.Json": "6.0.4"
-        }
-      },
       "Microsoft.Azure.DocumentDB/1.5.0": {
         "type": "package",
         "dependencies": {
@@ -912,52 +871,18 @@
           "lib/net45/Microsoft.Azure.Documents.Client.TransientFaultHandling.dll": {}
         }
       },
-      "Microsoft.Azure.Search/0.13.0-preview": {
+      "Microsoft.Azure.Search/1.1.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Azure.Common": "[2.0.4, 3.0.0)",
-          "Microsoft.Spatial": "6.10.0"
+          "Microsoft.Rest.ClientRuntime.Azure": "[2.5.2, 3.0.0)",
+          "Microsoft.Spatial": "[6.13.0, 7.0.0)"
         },
         "compile": {
-          "lib/net40/Microsoft.Azure.Search.dll": {}
+          "lib/net45/Microsoft.Azure.Search.dll": {}
         },
         "runtime": {
-          "lib/net40/Microsoft.Azure.Search.dll": {}
+          "lib/net45/Microsoft.Azure.Search.dll": {}
         }
-      },
-      "Microsoft.Bcl/1.1.9": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Bcl.Build": "1.0.14"
-        },
-        "compile": {
-          "lib/net45/_._": {}
-        },
-        "runtime": {
-          "lib/net45/_._": {}
-        }
-      },
-      "Microsoft.Bcl.Async/1.0.168": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Bcl": "1.1.8"
-        },
-        "frameworkAssemblies": [
-          "System.Net"
-        ],
-        "compile": {
-          "lib/net40/Microsoft.Threading.Tasks.dll": {},
-          "lib/net40/Microsoft.Threading.Tasks.Extensions.Desktop.dll": {},
-          "lib/net40/Microsoft.Threading.Tasks.Extensions.dll": {}
-        },
-        "runtime": {
-          "lib/net40/Microsoft.Threading.Tasks.dll": {},
-          "lib/net40/Microsoft.Threading.Tasks.Extensions.Desktop.dll": {},
-          "lib/net40/Microsoft.Threading.Tasks.Extensions.dll": {}
-        }
-      },
-      "Microsoft.Bcl.Build/1.0.14": {
-        "type": "package"
       },
       "Microsoft.CodeAnalysis.Analyzers/1.0.0": {
         "type": "package",
@@ -1449,25 +1374,6 @@
           "lib/net451/Microsoft.Extensions.WebEncoders.Core.dll": {}
         }
       },
-      "Microsoft.Net.Http/2.2.22": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Bcl": "1.1.9",
-          "Microsoft.Bcl.Build": "1.0.14"
-        },
-        "frameworkAssemblies": [
-          "System.Net.Http",
-          "System.Net.Http.WebRequest"
-        ],
-        "compile": {
-          "lib/net45/System.Net.Http.Extensions.dll": {},
-          "lib/net45/System.Net.Http.Primitives.dll": {}
-        },
-        "runtime": {
-          "lib/net45/System.Net.Http.Extensions.dll": {},
-          "lib/net45/System.Net.Http.Primitives.dll": {}
-        }
-      },
       "Microsoft.Net.Http.Headers/1.0.0-rc1-final": {
         "type": "package",
         "frameworkAssemblies": [
@@ -1483,40 +1389,84 @@
           "lib/net451/Microsoft.Net.Http.Headers.dll": {}
         }
       },
-      "Microsoft.Spatial/6.10.0": {
+      "Microsoft.Rest.ClientRuntime/1.8.1": {
         "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "7.0.1"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core",
+          "System.Net",
+          "System.Net.Http",
+          "System.Net.Http.WebRequest",
+          "System.Xml"
+        ],
         "compile": {
-          "lib/portable-net40+sl5+wp8+win8+wpa/Microsoft.Spatial.dll": {}
+          "lib/net45/Microsoft.Rest.ClientRuntime.dll": {}
         },
         "runtime": {
-          "lib/portable-net40+sl5+wp8+win8+wpa/Microsoft.Spatial.dll": {}
+          "lib/net45/Microsoft.Rest.ClientRuntime.dll": {}
+        }
+      },
+      "Microsoft.Rest.ClientRuntime.Azure/2.5.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Rest.ClientRuntime": "[1.8.1, 2.0.0)"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core",
+          "System.Net",
+          "System.Net.Http",
+          "System.Net.Http.WebRequest",
+          "System.Xml"
+        ],
+        "compile": {
+          "lib/net45/Microsoft.Rest.ClientRuntime.Azure.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Microsoft.Rest.ClientRuntime.Azure.dll": {}
+        }
+      },
+      "Microsoft.Spatial/6.13.0": {
+        "type": "package",
+        "compile": {
+          "lib/dnx451/Microsoft.Spatial.dll": {}
+        },
+        "runtime": {
+          "lib/dnx451/Microsoft.Spatial.dll": {}
         },
         "resource": {
-          "lib/portable-net40+sl5+wp8+win8+wpa/de/Microsoft.Spatial.resources.dll": {
+          "lib/dnx451/de/Microsoft.Spatial.resources.dll": {
             "locale": "de"
           },
-          "lib/portable-net40+sl5+wp8+win8+wpa/es/Microsoft.Spatial.resources.dll": {
+          "lib/dnx451/es/Microsoft.Spatial.resources.dll": {
             "locale": "es"
           },
-          "lib/portable-net40+sl5+wp8+win8+wpa/fr/Microsoft.Spatial.resources.dll": {
+          "lib/dnx451/fr/Microsoft.Spatial.resources.dll": {
             "locale": "fr"
           },
-          "lib/portable-net40+sl5+wp8+win8+wpa/it/Microsoft.Spatial.resources.dll": {
+          "lib/dnx451/it/Microsoft.Spatial.resources.dll": {
             "locale": "it"
           },
-          "lib/portable-net40+sl5+wp8+win8+wpa/ja/Microsoft.Spatial.resources.dll": {
+          "lib/dnx451/ja/Microsoft.Spatial.resources.dll": {
             "locale": "ja"
           },
-          "lib/portable-net40+sl5+wp8+win8+wpa/ko/Microsoft.Spatial.resources.dll": {
+          "lib/dnx451/ko/Microsoft.Spatial.resources.dll": {
             "locale": "ko"
           },
-          "lib/portable-net40+sl5+wp8+win8+wpa/ru/Microsoft.Spatial.resources.dll": {
+          "lib/dnx451/ru/Microsoft.Spatial.resources.dll": {
             "locale": "ru"
           },
-          "lib/portable-net40+sl5+wp8+win8+wpa/zh-Hans/Microsoft.Spatial.resources.dll": {
+          "lib/dnx451/zh-Hans/Microsoft.Spatial.resources.dll": {
             "locale": "zh-Hans"
           },
-          "lib/portable-net40+sl5+wp8+win8+wpa/zh-Hant/Microsoft.Spatial.resources.dll": {
+          "lib/dnx451/zh-Hant/Microsoft.Spatial.resources.dll": {
             "locale": "zh-Hant"
           }
         }
@@ -1777,22 +1727,6 @@
         },
         "runtime": {
           "lib/portable-net45+win+wp8/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.dll": {}
-        }
-      },
-      "Hyak.Common/1.0.2": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Bcl": "1.1.9",
-          "Microsoft.Bcl.Async": "1.0.168",
-          "Microsoft.Bcl.Build": "1.0.14",
-          "Microsoft.Net.Http": "2.2.22",
-          "Newtonsoft.Json": "6.0.4"
-        },
-        "compile": {
-          "lib/net45/Hyak.Common.dll": {}
-        },
-        "runtime": {
-          "lib/net45/Hyak.Common.dll": {}
         }
       },
       "Microsoft.AspNet.Antiforgery/1.0.0-rc1-final": {
@@ -2629,31 +2563,6 @@
           "lib/net451/Microsoft.AspNet.WebUtilities.dll": {}
         }
       },
-      "Microsoft.Azure.Common/2.0.4": {
-        "type": "package",
-        "dependencies": {
-          "Hyak.Common": "1.0.2",
-          "Microsoft.Azure.Common.Dependencies": "1.0.0"
-        },
-        "compile": {
-          "lib/net45/Microsoft.Azure.Common.dll": {},
-          "lib/net45/Microsoft.Azure.Common.NetFramework.dll": {}
-        },
-        "runtime": {
-          "lib/net45/Microsoft.Azure.Common.dll": {},
-          "lib/net45/Microsoft.Azure.Common.NetFramework.dll": {}
-        }
-      },
-      "Microsoft.Azure.Common.Dependencies/1.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Bcl": "1.1.9",
-          "Microsoft.Bcl.Async": "1.0.168",
-          "Microsoft.Bcl.Build": "1.0.14",
-          "Microsoft.Net.Http": "2.2.22",
-          "Newtonsoft.Json": "6.0.4"
-        }
-      },
       "Microsoft.Azure.DocumentDB/1.5.0": {
         "type": "package",
         "dependencies": {
@@ -2679,52 +2588,18 @@
           "lib/net45/Microsoft.Azure.Documents.Client.TransientFaultHandling.dll": {}
         }
       },
-      "Microsoft.Azure.Search/0.13.0-preview": {
+      "Microsoft.Azure.Search/1.1.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Azure.Common": "[2.0.4, 3.0.0)",
-          "Microsoft.Spatial": "6.10.0"
+          "Microsoft.Rest.ClientRuntime.Azure": "[2.5.2, 3.0.0)",
+          "Microsoft.Spatial": "[6.13.0, 7.0.0)"
         },
         "compile": {
-          "lib/net40/Microsoft.Azure.Search.dll": {}
+          "lib/net45/Microsoft.Azure.Search.dll": {}
         },
         "runtime": {
-          "lib/net40/Microsoft.Azure.Search.dll": {}
+          "lib/net45/Microsoft.Azure.Search.dll": {}
         }
-      },
-      "Microsoft.Bcl/1.1.9": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Bcl.Build": "1.0.14"
-        },
-        "compile": {
-          "lib/net45/_._": {}
-        },
-        "runtime": {
-          "lib/net45/_._": {}
-        }
-      },
-      "Microsoft.Bcl.Async/1.0.168": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Bcl": "1.1.8"
-        },
-        "frameworkAssemblies": [
-          "System.Net"
-        ],
-        "compile": {
-          "lib/net40/Microsoft.Threading.Tasks.dll": {},
-          "lib/net40/Microsoft.Threading.Tasks.Extensions.Desktop.dll": {},
-          "lib/net40/Microsoft.Threading.Tasks.Extensions.dll": {}
-        },
-        "runtime": {
-          "lib/net40/Microsoft.Threading.Tasks.dll": {},
-          "lib/net40/Microsoft.Threading.Tasks.Extensions.Desktop.dll": {},
-          "lib/net40/Microsoft.Threading.Tasks.Extensions.dll": {}
-        }
-      },
-      "Microsoft.Bcl.Build/1.0.14": {
-        "type": "package"
       },
       "Microsoft.CodeAnalysis.Analyzers/1.0.0": {
         "type": "package",
@@ -3216,25 +3091,6 @@
           "lib/net451/Microsoft.Extensions.WebEncoders.Core.dll": {}
         }
       },
-      "Microsoft.Net.Http/2.2.22": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Bcl": "1.1.9",
-          "Microsoft.Bcl.Build": "1.0.14"
-        },
-        "frameworkAssemblies": [
-          "System.Net.Http",
-          "System.Net.Http.WebRequest"
-        ],
-        "compile": {
-          "lib/net45/System.Net.Http.Extensions.dll": {},
-          "lib/net45/System.Net.Http.Primitives.dll": {}
-        },
-        "runtime": {
-          "lib/net45/System.Net.Http.Extensions.dll": {},
-          "lib/net45/System.Net.Http.Primitives.dll": {}
-        }
-      },
       "Microsoft.Net.Http.Headers/1.0.0-rc1-final": {
         "type": "package",
         "frameworkAssemblies": [
@@ -3250,40 +3106,84 @@
           "lib/net451/Microsoft.Net.Http.Headers.dll": {}
         }
       },
-      "Microsoft.Spatial/6.10.0": {
+      "Microsoft.Rest.ClientRuntime/1.8.1": {
         "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "7.0.1"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core",
+          "System.Net",
+          "System.Net.Http",
+          "System.Net.Http.WebRequest",
+          "System.Xml"
+        ],
         "compile": {
-          "lib/portable-net40+sl5+wp8+win8+wpa/Microsoft.Spatial.dll": {}
+          "lib/net45/Microsoft.Rest.ClientRuntime.dll": {}
         },
         "runtime": {
-          "lib/portable-net40+sl5+wp8+win8+wpa/Microsoft.Spatial.dll": {}
+          "lib/net45/Microsoft.Rest.ClientRuntime.dll": {}
+        }
+      },
+      "Microsoft.Rest.ClientRuntime.Azure/2.5.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Rest.ClientRuntime": "[1.8.1, 2.0.0)"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core",
+          "System.Net",
+          "System.Net.Http",
+          "System.Net.Http.WebRequest",
+          "System.Xml"
+        ],
+        "compile": {
+          "lib/net45/Microsoft.Rest.ClientRuntime.Azure.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Microsoft.Rest.ClientRuntime.Azure.dll": {}
+        }
+      },
+      "Microsoft.Spatial/6.13.0": {
+        "type": "package",
+        "compile": {
+          "lib/dnx451/Microsoft.Spatial.dll": {}
+        },
+        "runtime": {
+          "lib/dnx451/Microsoft.Spatial.dll": {}
         },
         "resource": {
-          "lib/portable-net40+sl5+wp8+win8+wpa/de/Microsoft.Spatial.resources.dll": {
+          "lib/dnx451/de/Microsoft.Spatial.resources.dll": {
             "locale": "de"
           },
-          "lib/portable-net40+sl5+wp8+win8+wpa/es/Microsoft.Spatial.resources.dll": {
+          "lib/dnx451/es/Microsoft.Spatial.resources.dll": {
             "locale": "es"
           },
-          "lib/portable-net40+sl5+wp8+win8+wpa/fr/Microsoft.Spatial.resources.dll": {
+          "lib/dnx451/fr/Microsoft.Spatial.resources.dll": {
             "locale": "fr"
           },
-          "lib/portable-net40+sl5+wp8+win8+wpa/it/Microsoft.Spatial.resources.dll": {
+          "lib/dnx451/it/Microsoft.Spatial.resources.dll": {
             "locale": "it"
           },
-          "lib/portable-net40+sl5+wp8+win8+wpa/ja/Microsoft.Spatial.resources.dll": {
+          "lib/dnx451/ja/Microsoft.Spatial.resources.dll": {
             "locale": "ja"
           },
-          "lib/portable-net40+sl5+wp8+win8+wpa/ko/Microsoft.Spatial.resources.dll": {
+          "lib/dnx451/ko/Microsoft.Spatial.resources.dll": {
             "locale": "ko"
           },
-          "lib/portable-net40+sl5+wp8+win8+wpa/ru/Microsoft.Spatial.resources.dll": {
+          "lib/dnx451/ru/Microsoft.Spatial.resources.dll": {
             "locale": "ru"
           },
-          "lib/portable-net40+sl5+wp8+win8+wpa/zh-Hans/Microsoft.Spatial.resources.dll": {
+          "lib/dnx451/zh-Hans/Microsoft.Spatial.resources.dll": {
             "locale": "zh-Hans"
           },
-          "lib/portable-net40+sl5+wp8+win8+wpa/zh-Hant/Microsoft.Spatial.resources.dll": {
+          "lib/dnx451/zh-Hant/Microsoft.Spatial.resources.dll": {
             "locale": "zh-Hant"
           }
         }
@@ -3544,22 +3444,6 @@
         },
         "runtime": {
           "lib/portable-net45+win+wp8/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.dll": {}
-        }
-      },
-      "Hyak.Common/1.0.2": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Bcl": "1.1.9",
-          "Microsoft.Bcl.Async": "1.0.168",
-          "Microsoft.Bcl.Build": "1.0.14",
-          "Microsoft.Net.Http": "2.2.22",
-          "Newtonsoft.Json": "6.0.4"
-        },
-        "compile": {
-          "lib/net45/Hyak.Common.dll": {}
-        },
-        "runtime": {
-          "lib/net45/Hyak.Common.dll": {}
         }
       },
       "Microsoft.AspNet.Antiforgery/1.0.0-rc1-final": {
@@ -4396,31 +4280,6 @@
           "lib/net451/Microsoft.AspNet.WebUtilities.dll": {}
         }
       },
-      "Microsoft.Azure.Common/2.0.4": {
-        "type": "package",
-        "dependencies": {
-          "Hyak.Common": "1.0.2",
-          "Microsoft.Azure.Common.Dependencies": "1.0.0"
-        },
-        "compile": {
-          "lib/net45/Microsoft.Azure.Common.dll": {},
-          "lib/net45/Microsoft.Azure.Common.NetFramework.dll": {}
-        },
-        "runtime": {
-          "lib/net45/Microsoft.Azure.Common.dll": {},
-          "lib/net45/Microsoft.Azure.Common.NetFramework.dll": {}
-        }
-      },
-      "Microsoft.Azure.Common.Dependencies/1.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Bcl": "1.1.9",
-          "Microsoft.Bcl.Async": "1.0.168",
-          "Microsoft.Bcl.Build": "1.0.14",
-          "Microsoft.Net.Http": "2.2.22",
-          "Newtonsoft.Json": "6.0.4"
-        }
-      },
       "Microsoft.Azure.DocumentDB/1.5.0": {
         "type": "package",
         "dependencies": {
@@ -4446,52 +4305,18 @@
           "lib/net45/Microsoft.Azure.Documents.Client.TransientFaultHandling.dll": {}
         }
       },
-      "Microsoft.Azure.Search/0.13.0-preview": {
+      "Microsoft.Azure.Search/1.1.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Azure.Common": "[2.0.4, 3.0.0)",
-          "Microsoft.Spatial": "6.10.0"
+          "Microsoft.Rest.ClientRuntime.Azure": "[2.5.2, 3.0.0)",
+          "Microsoft.Spatial": "[6.13.0, 7.0.0)"
         },
         "compile": {
-          "lib/net40/Microsoft.Azure.Search.dll": {}
+          "lib/net45/Microsoft.Azure.Search.dll": {}
         },
         "runtime": {
-          "lib/net40/Microsoft.Azure.Search.dll": {}
+          "lib/net45/Microsoft.Azure.Search.dll": {}
         }
-      },
-      "Microsoft.Bcl/1.1.9": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Bcl.Build": "1.0.14"
-        },
-        "compile": {
-          "lib/net45/_._": {}
-        },
-        "runtime": {
-          "lib/net45/_._": {}
-        }
-      },
-      "Microsoft.Bcl.Async/1.0.168": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Bcl": "1.1.8"
-        },
-        "frameworkAssemblies": [
-          "System.Net"
-        ],
-        "compile": {
-          "lib/net40/Microsoft.Threading.Tasks.dll": {},
-          "lib/net40/Microsoft.Threading.Tasks.Extensions.Desktop.dll": {},
-          "lib/net40/Microsoft.Threading.Tasks.Extensions.dll": {}
-        },
-        "runtime": {
-          "lib/net40/Microsoft.Threading.Tasks.dll": {},
-          "lib/net40/Microsoft.Threading.Tasks.Extensions.Desktop.dll": {},
-          "lib/net40/Microsoft.Threading.Tasks.Extensions.dll": {}
-        }
-      },
-      "Microsoft.Bcl.Build/1.0.14": {
-        "type": "package"
       },
       "Microsoft.CodeAnalysis.Analyzers/1.0.0": {
         "type": "package",
@@ -4983,25 +4808,6 @@
           "lib/net451/Microsoft.Extensions.WebEncoders.Core.dll": {}
         }
       },
-      "Microsoft.Net.Http/2.2.22": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Bcl": "1.1.9",
-          "Microsoft.Bcl.Build": "1.0.14"
-        },
-        "frameworkAssemblies": [
-          "System.Net.Http",
-          "System.Net.Http.WebRequest"
-        ],
-        "compile": {
-          "lib/net45/System.Net.Http.Extensions.dll": {},
-          "lib/net45/System.Net.Http.Primitives.dll": {}
-        },
-        "runtime": {
-          "lib/net45/System.Net.Http.Extensions.dll": {},
-          "lib/net45/System.Net.Http.Primitives.dll": {}
-        }
-      },
       "Microsoft.Net.Http.Headers/1.0.0-rc1-final": {
         "type": "package",
         "frameworkAssemblies": [
@@ -5017,40 +4823,84 @@
           "lib/net451/Microsoft.Net.Http.Headers.dll": {}
         }
       },
-      "Microsoft.Spatial/6.10.0": {
+      "Microsoft.Rest.ClientRuntime/1.8.1": {
         "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "7.0.1"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core",
+          "System.Net",
+          "System.Net.Http",
+          "System.Net.Http.WebRequest",
+          "System.Xml"
+        ],
         "compile": {
-          "lib/portable-net40+sl5+wp8+win8+wpa/Microsoft.Spatial.dll": {}
+          "lib/net45/Microsoft.Rest.ClientRuntime.dll": {}
         },
         "runtime": {
-          "lib/portable-net40+sl5+wp8+win8+wpa/Microsoft.Spatial.dll": {}
+          "lib/net45/Microsoft.Rest.ClientRuntime.dll": {}
+        }
+      },
+      "Microsoft.Rest.ClientRuntime.Azure/2.5.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Rest.ClientRuntime": "[1.8.1, 2.0.0)"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core",
+          "System.Net",
+          "System.Net.Http",
+          "System.Net.Http.WebRequest",
+          "System.Xml"
+        ],
+        "compile": {
+          "lib/net45/Microsoft.Rest.ClientRuntime.Azure.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Microsoft.Rest.ClientRuntime.Azure.dll": {}
+        }
+      },
+      "Microsoft.Spatial/6.13.0": {
+        "type": "package",
+        "compile": {
+          "lib/dnx451/Microsoft.Spatial.dll": {}
+        },
+        "runtime": {
+          "lib/dnx451/Microsoft.Spatial.dll": {}
         },
         "resource": {
-          "lib/portable-net40+sl5+wp8+win8+wpa/de/Microsoft.Spatial.resources.dll": {
+          "lib/dnx451/de/Microsoft.Spatial.resources.dll": {
             "locale": "de"
           },
-          "lib/portable-net40+sl5+wp8+win8+wpa/es/Microsoft.Spatial.resources.dll": {
+          "lib/dnx451/es/Microsoft.Spatial.resources.dll": {
             "locale": "es"
           },
-          "lib/portable-net40+sl5+wp8+win8+wpa/fr/Microsoft.Spatial.resources.dll": {
+          "lib/dnx451/fr/Microsoft.Spatial.resources.dll": {
             "locale": "fr"
           },
-          "lib/portable-net40+sl5+wp8+win8+wpa/it/Microsoft.Spatial.resources.dll": {
+          "lib/dnx451/it/Microsoft.Spatial.resources.dll": {
             "locale": "it"
           },
-          "lib/portable-net40+sl5+wp8+win8+wpa/ja/Microsoft.Spatial.resources.dll": {
+          "lib/dnx451/ja/Microsoft.Spatial.resources.dll": {
             "locale": "ja"
           },
-          "lib/portable-net40+sl5+wp8+win8+wpa/ko/Microsoft.Spatial.resources.dll": {
+          "lib/dnx451/ko/Microsoft.Spatial.resources.dll": {
             "locale": "ko"
           },
-          "lib/portable-net40+sl5+wp8+win8+wpa/ru/Microsoft.Spatial.resources.dll": {
+          "lib/dnx451/ru/Microsoft.Spatial.resources.dll": {
             "locale": "ru"
           },
-          "lib/portable-net40+sl5+wp8+win8+wpa/zh-Hans/Microsoft.Spatial.resources.dll": {
+          "lib/dnx451/zh-Hans/Microsoft.Spatial.resources.dll": {
             "locale": "zh-Hans"
           },
-          "lib/portable-net40+sl5+wp8+win8+wpa/zh-Hant/Microsoft.Spatial.resources.dll": {
+          "lib/dnx451/zh-Hant/Microsoft.Spatial.resources.dll": {
             "locale": "zh-Hant"
           }
         }
@@ -5314,21 +5164,6 @@
         "Readme.txt",
         "tools/install.ps1",
         "tools/Utils.psm1"
-      ]
-    },
-    "Hyak.Common/1.0.2": {
-      "type": "package",
-      "sha512": "kqWlD8Oi9LNLFsJoEnmbU5rYyu/LiPRkLlE1x4D07fYgH0VXcgOnib5PRLacpffLwt0CNHrzIYXj/BajGRgrPA==",
-      "files": [
-        "Hyak.Common.1.0.2.nupkg",
-        "Hyak.Common.1.0.2.nupkg.sha512",
-        "Hyak.Common.nuspec",
-        "lib/net40/Hyak.Common.dll",
-        "lib/net40/Hyak.Common.xml",
-        "lib/net45/Hyak.Common.dll",
-        "lib/net45/Hyak.Common.xml",
-        "lib/portable-net403+win+wpa81/Hyak.Common.dll",
-        "lib/portable-net403+win+wpa81/Hyak.Common.xml"
       ]
     },
     "Microsoft.AspNet.Antiforgery/1.0.0-rc1-final": {
@@ -5918,34 +5753,6 @@
         "Microsoft.AspNet.WebUtilities.nuspec"
       ]
     },
-    "Microsoft.Azure.Common/2.0.4": {
-      "type": "package",
-      "sha512": "bCUYaWuLNaNTwJPRuCKt6uczZ9DrBCOZYnlu1EzqhmI+Anql77+sgObk9d5ir8fjnUEioFqDztWN+CmUBPq0sA==",
-      "files": [
-        "lib/net40/Microsoft.Azure.Common.dll",
-        "lib/net40/Microsoft.Azure.Common.NetFramework.dll",
-        "lib/net40/Microsoft.Azure.Common.NetFramework.xml",
-        "lib/net40/Microsoft.Azure.Common.xml",
-        "lib/net45/Microsoft.Azure.Common.dll",
-        "lib/net45/Microsoft.Azure.Common.NetFramework.dll",
-        "lib/net45/Microsoft.Azure.Common.NetFramework.xml",
-        "lib/net45/Microsoft.Azure.Common.xml",
-        "lib/portable-net45+wp8+wpa81+win/Microsoft.Azure.Common.dll",
-        "lib/portable-net45+wp8+wpa81+win/Microsoft.Azure.Common.xml",
-        "Microsoft.Azure.Common.2.0.4.nupkg",
-        "Microsoft.Azure.Common.2.0.4.nupkg.sha512",
-        "Microsoft.Azure.Common.nuspec"
-      ]
-    },
-    "Microsoft.Azure.Common.Dependencies/1.0.0": {
-      "type": "package",
-      "sha512": "qRk48ELK5MitFOrS6ZYmZ2mpy2pGRA2mA/+9jODLInau8NcDNEB3qnk/Vv5iMfPT81/anmvmxY+IQxXZ7U+xIg==",
-      "files": [
-        "Microsoft.Azure.Common.Dependencies.1.0.0.nupkg",
-        "Microsoft.Azure.Common.Dependencies.1.0.0.nupkg.sha512",
-        "Microsoft.Azure.Common.Dependencies.nuspec"
-      ]
-    },
     "Microsoft.Azure.DocumentDB/1.5.0": {
       "type": "package",
       "sha512": "34YdERyrxmf61gtwFVxtEzUBqS5Ynh3nMcPKYoZJK2itkkLRJcQlHEg4/C6pwabHSUIkNWU/EPbmPX8nZYojbw==",
@@ -5968,192 +5775,17 @@
         "Microsoft.Azure.DocumentDB.TransientFaultHandling.nuspec"
       ]
     },
-    "Microsoft.Azure.Search/0.13.0-preview": {
+    "Microsoft.Azure.Search/1.1.0": {
       "type": "package",
-      "sha512": "y2RYePzcPj/Lw87txa6576cI32aKRJpjP0BQfSZGw7dt/+kLiZ2LzGb46tgYaLYMoXXJ1thK0/5mR0G5CfPV7Q==",
+      "sha512": "0d7Z2SDSaIfkCJKsqPPO1V9Unt9luA8exH+quKYNZCdOSUMgeeROv2FdIIPjn2xnDNPkiIRVbx2/jAq085FckQ==",
       "files": [
-        "lib/net40/Microsoft.Azure.Search.dll",
-        "lib/net40/Microsoft.Azure.Search.xml",
-        "lib/portable-net45+wp8+wpa81+win/Microsoft.Azure.Search.dll",
-        "lib/portable-net45+wp8+wpa81+win/Microsoft.Azure.Search.xml",
-        "Microsoft.Azure.Search.0.13.0-preview.nupkg",
-        "Microsoft.Azure.Search.0.13.0-preview.nupkg.sha512",
+        "lib/net45/Microsoft.Azure.Search.dll",
+        "lib/net45/Microsoft.Azure.Search.xml",
+        "lib/portable-net403+win8+wpa81/Microsoft.Azure.Search.dll",
+        "lib/portable-net403+win8+wpa81/Microsoft.Azure.Search.xml",
+        "Microsoft.Azure.Search.1.1.0.nupkg",
+        "Microsoft.Azure.Search.1.1.0.nupkg.sha512",
         "Microsoft.Azure.Search.nuspec"
-      ]
-    },
-    "Microsoft.Bcl/1.1.9": {
-      "type": "package",
-      "sha512": "USQ55innJy8K+tAXvVa1O8dUTp2s7pmJ5cJj6Tl02HtGc2xBDj0P2QH5620HbGXIWKWYhydoeQF8Rm/JRDBGhw==",
-      "files": [
-        "content/monoandroid/_._",
-        "content/monotouch/_._",
-        "content/net45/_._",
-        "content/portable-net45+win8+wp8+wpa81/_._",
-        "content/portable-net45+win8+wpa81/_._",
-        "content/portable-net451+win81/_._",
-        "content/portable-net451+win81+wpa81/_._",
-        "content/portable-win81+wp81+wpa81/_._",
-        "content/sl4/_._",
-        "content/sl5/_._",
-        "content/win8/_._",
-        "content/wp8/_._",
-        "content/wpa81/_._",
-        "lib/monoandroid/_._",
-        "lib/monotouch/_._",
-        "lib/net40/ensureRedirect.xml",
-        "lib/net40/System.IO.dll",
-        "lib/net40/System.IO.xml",
-        "lib/net40/System.Runtime.dll",
-        "lib/net40/System.Runtime.xml",
-        "lib/net40/System.Threading.Tasks.dll",
-        "lib/net40/System.Threading.Tasks.xml",
-        "lib/net45/_._",
-        "lib/portable-net40+sl4+win8/ensureRedirect.xml",
-        "lib/portable-net40+sl4+win8/System.IO.dll",
-        "lib/portable-net40+sl4+win8/System.IO.xml",
-        "lib/portable-net40+sl4+win8/System.Runtime.dll",
-        "lib/portable-net40+sl4+win8/System.Runtime.xml",
-        "lib/portable-net40+sl4+win8/System.Threading.Tasks.dll",
-        "lib/portable-net40+sl4+win8/System.Threading.Tasks.xml",
-        "lib/portable-net40+sl4+win8+wp71+wpa81/ensureRedirect.xml",
-        "lib/portable-net40+sl4+win8+wp71+wpa81/System.IO.dll",
-        "lib/portable-net40+sl4+win8+wp71+wpa81/System.IO.xml",
-        "lib/portable-net40+sl4+win8+wp71+wpa81/System.Runtime.dll",
-        "lib/portable-net40+sl4+win8+wp71+wpa81/System.Runtime.xml",
-        "lib/portable-net40+sl4+win8+wp71+wpa81/System.Threading.Tasks.dll",
-        "lib/portable-net40+sl4+win8+wp71+wpa81/System.Threading.Tasks.xml",
-        "lib/portable-net40+sl4+win8+wp8+wpa81/ensureRedirect.xml",
-        "lib/portable-net40+sl4+win8+wp8+wpa81/System.IO.dll",
-        "lib/portable-net40+sl4+win8+wp8+wpa81/System.IO.xml",
-        "lib/portable-net40+sl4+win8+wp8+wpa81/System.Runtime.dll",
-        "lib/portable-net40+sl4+win8+wp8+wpa81/System.Runtime.xml",
-        "lib/portable-net40+sl4+win8+wp8+wpa81/System.Threading.Tasks.dll",
-        "lib/portable-net40+sl4+win8+wp8+wpa81/System.Threading.Tasks.xml",
-        "lib/portable-net40+sl5+win8+wp8+wpa81/ensureRedirect.xml",
-        "lib/portable-net40+sl5+win8+wp8+wpa81/System.IO.dll",
-        "lib/portable-net40+sl5+win8+wp8+wpa81/System.IO.xml",
-        "lib/portable-net40+sl5+win8+wp8+wpa81/System.Runtime.dll",
-        "lib/portable-net40+sl5+win8+wp8+wpa81/System.Runtime.xml",
-        "lib/portable-net40+sl5+win8+wp8+wpa81/System.Threading.Tasks.dll",
-        "lib/portable-net40+sl5+win8+wp8+wpa81/System.Threading.Tasks.xml",
-        "lib/portable-net40+win8/ensureRedirect.xml",
-        "lib/portable-net40+win8/System.IO.dll",
-        "lib/portable-net40+win8/System.IO.xml",
-        "lib/portable-net40+win8/System.Runtime.dll",
-        "lib/portable-net40+win8/System.Runtime.xml",
-        "lib/portable-net40+win8/System.Threading.Tasks.dll",
-        "lib/portable-net40+win8/System.Threading.Tasks.xml",
-        "lib/portable-net40+win8+wp8+wpa81/ensureRedirect.xml",
-        "lib/portable-net40+win8+wp8+wpa81/System.IO.dll",
-        "lib/portable-net40+win8+wp8+wpa81/System.IO.xml",
-        "lib/portable-net40+win8+wp8+wpa81/System.Runtime.dll",
-        "lib/portable-net40+win8+wp8+wpa81/System.Runtime.xml",
-        "lib/portable-net40+win8+wp8+wpa81/System.Threading.Tasks.dll",
-        "lib/portable-net40+win8+wp8+wpa81/System.Threading.Tasks.xml",
-        "lib/portable-net45+win8+wp8+wpa81/_._",
-        "lib/portable-net45+win8+wpa81/_._",
-        "lib/portable-net451+win81/_._",
-        "lib/portable-net451+win81+wpa81/_._",
-        "lib/portable-win81+wp81+wpa81/_._",
-        "lib/sl4/System.IO.dll",
-        "lib/sl4/System.IO.xml",
-        "lib/sl4/System.Runtime.dll",
-        "lib/sl4/System.Runtime.xml",
-        "lib/sl4/System.Threading.Tasks.dll",
-        "lib/sl4/System.Threading.Tasks.xml",
-        "lib/sl4-windowsphone71/ensureRedirect.xml",
-        "lib/sl4-windowsphone71/System.IO.dll",
-        "lib/sl4-windowsphone71/System.IO.xml",
-        "lib/sl4-windowsphone71/System.Runtime.dll",
-        "lib/sl4-windowsphone71/System.Runtime.xml",
-        "lib/sl4-windowsphone71/System.Threading.Tasks.dll",
-        "lib/sl4-windowsphone71/System.Threading.Tasks.xml",
-        "lib/sl5/System.IO.dll",
-        "lib/sl5/System.IO.xml",
-        "lib/sl5/System.Runtime.dll",
-        "lib/sl5/System.Runtime.xml",
-        "lib/sl5/System.Threading.Tasks.dll",
-        "lib/sl5/System.Threading.Tasks.xml",
-        "lib/win8/_._",
-        "lib/wp8/_._",
-        "lib/wpa81/_._",
-        "License-Stable.rtf",
-        "Microsoft.Bcl.1.1.9.nupkg",
-        "Microsoft.Bcl.1.1.9.nupkg.sha512",
-        "Microsoft.Bcl.nuspec"
-      ]
-    },
-    "Microsoft.Bcl.Async/1.0.168": {
-      "type": "package",
-      "sha512": "tUNC02eBwDKpGre0BcNIvblLv1q0Q3DnS/vtkRHj2FE1sXwt386HAudztyl5C0U88hllrqHDvtlz8bK0Y8cHDA==",
-      "files": [
-        "lib/net40/Microsoft.Threading.Tasks.dll",
-        "lib/net40/Microsoft.Threading.Tasks.Extensions.Desktop.dll",
-        "lib/net40/Microsoft.Threading.Tasks.Extensions.Desktop.xml",
-        "lib/net40/Microsoft.Threading.Tasks.Extensions.dll",
-        "lib/net40/Microsoft.Threading.Tasks.Extensions.xml",
-        "lib/net40/Microsoft.Threading.Tasks.xml",
-        "lib/portable-net40+sl4+win8+wp71+wpa81/Microsoft.Threading.Tasks.dll",
-        "lib/portable-net40+sl4+win8+wp71+wpa81/Microsoft.Threading.Tasks.Extensions.dll",
-        "lib/portable-net40+sl4+win8+wp71+wpa81/Microsoft.Threading.Tasks.Extensions.xml",
-        "lib/portable-net40+sl4+win8+wp71+wpa81/Microsoft.Threading.Tasks.xml",
-        "lib/portable-net45+win8+wp8+wpa81/Microsoft.Threading.Tasks.dll",
-        "lib/portable-net45+win8+wp8+wpa81/Microsoft.Threading.Tasks.Extensions.dll",
-        "lib/portable-net45+win8+wp8+wpa81/Microsoft.Threading.Tasks.Extensions.xml",
-        "lib/portable-net45+win8+wp8+wpa81/Microsoft.Threading.Tasks.xml",
-        "lib/portable-net45+win8+wpa81/Microsoft.Threading.Tasks.dll",
-        "lib/portable-net45+win8+wpa81/Microsoft.Threading.Tasks.Extensions.dll",
-        "lib/portable-net45+win8+wpa81/Microsoft.Threading.Tasks.Extensions.xml",
-        "lib/portable-net45+win8+wpa81/Microsoft.Threading.Tasks.xml",
-        "lib/sl4/Microsoft.Threading.Tasks.dll",
-        "lib/sl4/Microsoft.Threading.Tasks.Extensions.dll",
-        "lib/sl4/Microsoft.Threading.Tasks.Extensions.Silverlight.dll",
-        "lib/sl4/Microsoft.Threading.Tasks.Extensions.Silverlight.xml",
-        "lib/sl4/Microsoft.Threading.Tasks.Extensions.xml",
-        "lib/sl4/Microsoft.Threading.Tasks.xml",
-        "lib/sl4-windowsphone71/Microsoft.Threading.Tasks.dll",
-        "lib/sl4-windowsphone71/Microsoft.Threading.Tasks.Extensions.dll",
-        "lib/sl4-windowsphone71/Microsoft.Threading.Tasks.Extensions.Phone.dll",
-        "lib/sl4-windowsphone71/Microsoft.Threading.Tasks.Extensions.Phone.xml",
-        "lib/sl4-windowsphone71/Microsoft.Threading.Tasks.Extensions.xml",
-        "lib/sl4-windowsphone71/Microsoft.Threading.Tasks.xml",
-        "lib/win8/Microsoft.Threading.Tasks.dll",
-        "lib/win8/Microsoft.Threading.Tasks.Extensions.dll",
-        "lib/win8/Microsoft.Threading.Tasks.Extensions.xml",
-        "lib/win8/Microsoft.Threading.Tasks.xml",
-        "lib/wp8/Microsoft.Threading.Tasks.dll",
-        "lib/wp8/Microsoft.Threading.Tasks.Extensions.dll",
-        "lib/wp8/Microsoft.Threading.Tasks.Extensions.Phone.dll",
-        "lib/wp8/Microsoft.Threading.Tasks.Extensions.Phone.xml",
-        "lib/wp8/Microsoft.Threading.Tasks.Extensions.xml",
-        "lib/wp8/Microsoft.Threading.Tasks.xml",
-        "lib/wpa81/Microsoft.Threading.Tasks.dll",
-        "lib/wpa81/Microsoft.Threading.Tasks.Extensions.dll",
-        "lib/wpa81/Microsoft.Threading.Tasks.Extensions.xml",
-        "lib/wpa81/Microsoft.Threading.Tasks.xml",
-        "License-Stable.rtf",
-        "Microsoft.Bcl.Async.1.0.168.nupkg",
-        "Microsoft.Bcl.Async.1.0.168.nupkg.sha512",
-        "Microsoft.Bcl.Async.nuspec"
-      ]
-    },
-    "Microsoft.Bcl.Build/1.0.14": {
-      "type": "package",
-      "sha512": "cDLKSvNvRa519hplsbSoYqO69TjdDIhfjtKUM0g20/nVROoWsGav9KCI9HtnGjLmdV1+TcUUDhbotcllibjPEA==",
-      "files": [
-        "content/net40/_._",
-        "content/netcore45/_._",
-        "content/portable-net40+win8+sl4+wp71+wpa81/_._",
-        "content/sl4/_._",
-        "content/sl4-windowsphone71/_._",
-        "License-Stable.rtf",
-        "Microsoft.Bcl.Build.1.0.14.nupkg",
-        "Microsoft.Bcl.Build.1.0.14.nupkg.sha512",
-        "Microsoft.Bcl.Build.nuspec",
-        "tools/Install.ps1",
-        "tools/Microsoft.Bcl.Build.targets",
-        "tools/Microsoft.Bcl.Build.Tasks.dll",
-        "tools/Uninstall.ps1"
       ]
     },
     "Microsoft.CodeAnalysis.Analyzers/1.0.0": {
@@ -6594,70 +6226,6 @@
         "Microsoft.Extensions.WebEncoders.Core.nuspec"
       ]
     },
-    "Microsoft.Net.Http/2.2.22": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "bqVLJ2UimlAEs2bn3y28lB1pmFRxuysv9pFyB0A86WEMYGYTfDyfjAGjm0fiaSRjlMNU1jVnp8Mxt8qe4OmpXQ==",
-      "files": [
-        "lib/monoandroid/System.Net.Http.Extensions.dll",
-        "lib/monoandroid/System.Net.Http.Extensions.XML",
-        "lib/monoandroid/System.Net.Http.Primitives.dll",
-        "lib/monoandroid/System.Net.Http.Primitives.xml",
-        "lib/monotouch/System.Net.Http.Extensions.dll",
-        "lib/monotouch/System.Net.Http.Extensions.XML",
-        "lib/monotouch/System.Net.Http.Primitives.dll",
-        "lib/monotouch/System.Net.Http.Primitives.xml",
-        "lib/net40/ensureRedirect.xml",
-        "lib/net40/System.Net.Http.dll",
-        "lib/net40/System.Net.Http.Extensions.dll",
-        "lib/net40/System.Net.Http.Extensions.XML",
-        "lib/net40/System.Net.Http.Primitives.dll",
-        "lib/net40/System.Net.Http.Primitives.xml",
-        "lib/net40/System.Net.Http.WebRequest.dll",
-        "lib/net40/System.Net.Http.WebRequest.xml",
-        "lib/net40/System.Net.Http.xml",
-        "lib/net45/ensureRedirect.xml",
-        "lib/net45/System.Net.Http.Extensions.dll",
-        "lib/net45/System.Net.Http.Extensions.XML",
-        "lib/net45/System.Net.Http.Primitives.dll",
-        "lib/net45/System.Net.Http.Primitives.xml",
-        "lib/portable-net40+sl4+win8+wp71+wpa81/ensureRedirect.xml",
-        "lib/portable-net40+sl4+win8+wp71+wpa81/System.Net.Http.dll",
-        "lib/portable-net40+sl4+win8+wp71+wpa81/System.Net.Http.Extensions.dll",
-        "lib/portable-net40+sl4+win8+wp71+wpa81/System.Net.Http.Extensions.XML",
-        "lib/portable-net40+sl4+win8+wp71+wpa81/System.Net.Http.Primitives.dll",
-        "lib/portable-net40+sl4+win8+wp71+wpa81/System.Net.Http.Primitives.XML",
-        "lib/portable-net40+sl4+win8+wp71+wpa81/System.Net.Http.xml",
-        "lib/portable-net45+win8/ensureRedirect.xml",
-        "lib/portable-net45+win8/System.Net.Http.Extensions.dll",
-        "lib/portable-net45+win8/System.Net.Http.Extensions.XML",
-        "lib/portable-net45+win8/System.Net.Http.Primitives.dll",
-        "lib/portable-net45+win8/System.Net.Http.Primitives.xml",
-        "lib/portable-net45+win8+wpa81/ensureRedirect.xml",
-        "lib/portable-net45+win8+wpa81/System.Net.Http.Extensions.dll",
-        "lib/portable-net45+win8+wpa81/System.Net.Http.Extensions.XML",
-        "lib/portable-net45+win8+wpa81/System.Net.Http.Primitives.dll",
-        "lib/portable-net45+win8+wpa81/System.Net.Http.Primitives.xml",
-        "lib/sl4-windowsphone71/System.Net.Http.dll",
-        "lib/sl4-windowsphone71/System.Net.Http.Extensions.dll",
-        "lib/sl4-windowsphone71/System.Net.Http.Extensions.XML",
-        "lib/sl4-windowsphone71/System.Net.Http.Primitives.dll",
-        "lib/sl4-windowsphone71/System.Net.Http.Primitives.XML",
-        "lib/sl4-windowsphone71/System.Net.Http.xml",
-        "lib/win8/System.Net.Http.Extensions.dll",
-        "lib/win8/System.Net.Http.Extensions.XML",
-        "lib/win8/System.Net.Http.Primitives.dll",
-        "lib/win8/System.Net.Http.Primitives.xml",
-        "lib/wpa81/System.Net.Http.Extensions.dll",
-        "lib/wpa81/System.Net.Http.Extensions.XML",
-        "lib/wpa81/System.Net.Http.Primitives.dll",
-        "lib/wpa81/System.Net.Http.Primitives.xml",
-        "License-Stable.rtf",
-        "Microsoft.Net.Http.2.2.22.nupkg",
-        "Microsoft.Net.Http.2.2.22.nupkg.sha512",
-        "Microsoft.Net.Http.nuspec"
-      ]
-    },
     "Microsoft.Net.Http.Headers/1.0.0-rc1-final": {
       "type": "package",
       "serviceable": true,
@@ -6672,10 +6240,63 @@
         "Microsoft.Net.Http.Headers.nuspec"
       ]
     },
-    "Microsoft.Spatial/6.10.0": {
+    "Microsoft.Rest.ClientRuntime/1.8.1": {
       "type": "package",
-      "sha512": "f5giij2hCAMwRTDwcaVPDqzNlCmCGK2siwN1R0bvlF0EqKS+9TJpc/8dLUdx35tSc5TO1zknRAwuxIljnIdZ+Q==",
+      "sha512": "h7qB4anQ3RFSBWyvPWkSweBc+jCZe8q05j21fmORJdpEEzwUFDx0b6K2FWvvtNt7LOEpja9cP8EMbBEXCEhz6Q==",
       "files": [
+        "lib/dnxcore50/Microsoft.Rest.ClientRuntime.dll",
+        "lib/dnxcore50/Microsoft.Rest.ClientRuntime.xml",
+        "lib/net45/Microsoft.Rest.ClientRuntime.dll",
+        "lib/net45/Microsoft.Rest.ClientRuntime.xml",
+        "lib/portable-net45+win+wpa81/Microsoft.Rest.ClientRuntime.dll",
+        "lib/portable-net45+win+wpa81/Microsoft.Rest.ClientRuntime.xml",
+        "Microsoft.Rest.ClientRuntime.1.8.1.nupkg",
+        "Microsoft.Rest.ClientRuntime.1.8.1.nupkg.sha512",
+        "Microsoft.Rest.ClientRuntime.nuspec"
+      ]
+    },
+    "Microsoft.Rest.ClientRuntime.Azure/2.5.2": {
+      "type": "package",
+      "sha512": "6GxYBn0AhlXnCssxRvbMTgofdGrJNKsHL7B3hB3Lh7HXdXdc6PC4rJHHw2WLeYb9Op3q1WB3CgL5k0xgfC/MPQ==",
+      "files": [
+        "lib/dnxcore50/Microsoft.Rest.ClientRuntime.Azure.dll",
+        "lib/dnxcore50/Microsoft.Rest.ClientRuntime.Azure.xml",
+        "lib/net45/Microsoft.Rest.ClientRuntime.Azure.dll",
+        "lib/net45/Microsoft.Rest.ClientRuntime.Azure.xml",
+        "lib/portable-net45+win+wpa81/Microsoft.Rest.ClientRuntime.Azure.dll",
+        "lib/portable-net45+win+wpa81/Microsoft.Rest.ClientRuntime.Azure.xml",
+        "Microsoft.Rest.ClientRuntime.Azure.2.5.2.nupkg",
+        "Microsoft.Rest.ClientRuntime.Azure.2.5.2.nupkg.sha512",
+        "Microsoft.Rest.ClientRuntime.Azure.nuspec"
+      ]
+    },
+    "Microsoft.Spatial/6.13.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "B1KZi/w1ptNPN8HzeRYg8LG4vyx5ulVnV0IJ4WWplU1vNpxDf7tKh1MV0KdZODc9mkh0Sc2WziznXd1AouW6SQ==",
+      "files": [
+        "lib/dnx451/de/Microsoft.Spatial.resources.dll",
+        "lib/dnx451/es/Microsoft.Spatial.resources.dll",
+        "lib/dnx451/fr/Microsoft.Spatial.resources.dll",
+        "lib/dnx451/it/Microsoft.Spatial.resources.dll",
+        "lib/dnx451/ja/Microsoft.Spatial.resources.dll",
+        "lib/dnx451/ko/Microsoft.Spatial.resources.dll",
+        "lib/dnx451/Microsoft.Spatial.dll",
+        "lib/dnx451/Microsoft.Spatial.xml",
+        "lib/dnx451/ru/Microsoft.Spatial.resources.dll",
+        "lib/dnx451/zh-Hans/Microsoft.Spatial.resources.dll",
+        "lib/dnx451/zh-Hant/Microsoft.Spatial.resources.dll",
+        "lib/dnxcore50/de/Microsoft.Spatial.resources.dll",
+        "lib/dnxcore50/es/Microsoft.Spatial.resources.dll",
+        "lib/dnxcore50/fr/Microsoft.Spatial.resources.dll",
+        "lib/dnxcore50/it/Microsoft.Spatial.resources.dll",
+        "lib/dnxcore50/ja/Microsoft.Spatial.resources.dll",
+        "lib/dnxcore50/ko/Microsoft.Spatial.resources.dll",
+        "lib/dnxcore50/Microsoft.Spatial.dll",
+        "lib/dnxcore50/Microsoft.Spatial.xml",
+        "lib/dnxcore50/ru/Microsoft.Spatial.resources.dll",
+        "lib/dnxcore50/zh-Hans/Microsoft.Spatial.resources.dll",
+        "lib/dnxcore50/zh-Hant/Microsoft.Spatial.resources.dll",
         "lib/portable-net40+sl5+wp8+win8+wpa/de/Microsoft.Spatial.resources.dll",
         "lib/portable-net40+sl5+wp8+win8+wpa/es/Microsoft.Spatial.resources.dll",
         "lib/portable-net40+sl5+wp8+win8+wpa/fr/Microsoft.Spatial.resources.dll",
@@ -6687,8 +6308,8 @@
         "lib/portable-net40+sl5+wp8+win8+wpa/ru/Microsoft.Spatial.resources.dll",
         "lib/portable-net40+sl5+wp8+win8+wpa/zh-Hans/Microsoft.Spatial.resources.dll",
         "lib/portable-net40+sl5+wp8+win8+wpa/zh-Hant/Microsoft.Spatial.resources.dll",
-        "Microsoft.Spatial.6.10.0.nupkg",
-        "Microsoft.Spatial.6.10.0.nupkg.sha512",
+        "Microsoft.Spatial.6.13.0.nupkg",
+        "Microsoft.Spatial.6.13.0.nupkg.sha512",
         "Microsoft.Spatial.nuspec"
       ]
     },
@@ -7501,7 +7122,7 @@
       "Microsoft.Azure.DocumentDB.TransientFaultHandling >= 1.2.0",
       "EnterpriseLibrary.TransientFaultHandling >= 6.0.1304",
       "Newtonsoft.Json >= 7.0.1",
-      "Microsoft.Azure.Search >= 0.13.0-preview"
+      "Microsoft.Azure.Search >= 1.1.0"
     ],
     "DNX,Version=v4.6": []
   }
