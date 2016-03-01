@@ -6,6 +6,7 @@ namespace MVPStream.Services
     {
         public static BusquedaViewModel GetModel(string query, int page)
         {
+            query = System.Uri.UnescapeDataString(query);
             var model = SearchService.SimpleSearch(query, 15, page);
             return new BusquedaViewModel()
             {

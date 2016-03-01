@@ -30,11 +30,11 @@
     <nav class="paginatewrapper">
             @if (Model.Page > 1)
             {
-                 <a href="@Url.Action("Busqueda", new { q =System.Uri.EscapeUriString(Model.Query), page = Model.Page - 1 })"><button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect prev paginate">
+                 <a href="@Url.Action("Busqueda", new { q =Model.Query, page = Model.Page - 1 })"><button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect prev paginate">
                 Anteriores
             </button></a>
             }
-             <a href="@Url.Action("Busqueda", new {q=System.Uri.EscapeUriString(Model.Query),  page = Model.Page + 1 })"><button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect next paginate">
+             <a href="@Url.Action("Busqueda", new {q=Model.Query,  page = Model.Page + 1 })"><button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect next paginate">
                 Más resultados
             </button></a>
             
