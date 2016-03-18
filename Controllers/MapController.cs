@@ -20,8 +20,7 @@ namespace MVPStream.Controllers
             xmlMap.Append("<url><loc>" + baseUrl + "videos</loc><lastmod>" + DateTime.Now.ToString("yyyy-MM-dd") + "</lastmod><changefreq>daily</changefreq></url>");
             foreach (var especialidad in MVPStream.Models.Especialidades.All)
             {
-                
-                xmlMap.Append("<url><loc>" + baseUrl + "busqueda?q="+System.Uri.EscapeUriString(especialidad.GetNombre())+"</loc><lastmod>" + DateTime.Now.ToString("yyyy-MM-dd") + "</lastmod><changefreq>daily</changefreq></url>");
+                xmlMap.Append("<url><loc>" + baseUrl + "busqueda?q="+System.Uri.EscapeDataString(especialidad.GetNombre())+"</loc><lastmod>" + DateTime.Now.ToString("yyyy-MM-dd") + "</lastmod><changefreq>daily</changefreq></url>");
             }
             foreach (var publisher in DocumentDB.GetAllPublishers().Result)
             {
