@@ -240,6 +240,7 @@ footer.mdl-grid > div {
     width:302px;
     height:402px;
     display:block;
+    z-index:20;
   }
   .container {
     width: 750px;
