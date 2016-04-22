@@ -26,11 +26,11 @@
         "Microsoft.AspNet.Server.Kestrel": "1.0.0-rc1-final",   
         "MVPStream.Models": "2.0.0",
         "Microsoft.AspNet.WebApi.Client":"5.2.3",
-        "Microsoft.Azure.DocumentDB":"1.5.0",
+        "Microsoft.Azure.DocumentDB":"1.6.3",
         "Microsoft.Azure.DocumentDB.TransientFaultHandling": "1.2.0",
         "EnterpriseLibrary.TransientFaultHandling": "6.0.1304.0",
-        "Newtonsoft.Json": "7.0.1",
-        "Microsoft.Azure.Search": "1.1.0"
+        "Newtonsoft.Json": "8.0.3",
+        "Microsoft.Azure.Search": "1.1.1"
     },
     "commands": {
        "web": "Microsoft.AspNet.Server.Kestrel"

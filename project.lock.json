@@ -846,16 +846,16 @@
           "lib/net451/Microsoft.AspNet.WebUtilities.dll": {}
         }
       },
-      "Microsoft.Azure.DocumentDB/1.5.0": {
+      "Microsoft.Azure.DocumentDB/1.6.3": {
         "type": "package",
         "dependencies": {
-          "Newtonsoft.Json": "5.0.7"
+          "Newtonsoft.Json": "6.0.8"
         },
         "compile": {
-          "lib/net40/Microsoft.Azure.Documents.Client.dll": {}
+          "lib/net45/Microsoft.Azure.Documents.Client.dll": {}
         },
         "runtime": {
-          "lib/net40/Microsoft.Azure.Documents.Client.dll": {}
+          "lib/net45/Microsoft.Azure.Documents.Client.dll": {}
         }
       },
       "Microsoft.Azure.DocumentDB.TransientFaultHandling/1.2.0": {
@@ -871,7 +871,7 @@
           "lib/net45/Microsoft.Azure.Documents.Client.TransientFaultHandling.dll": {}
         }
       },
-      "Microsoft.Azure.Search/1.1.0": {
+      "Microsoft.Azure.Search/1.1.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Rest.ClientRuntime.Azure": "[2.5.2, 3.0.0)",
@@ -1489,7 +1489,7 @@
           "lib/dnx46/MVPStream.Models.dll": {}
         }
       },
-      "Newtonsoft.Json/7.0.1": {
+      "Newtonsoft.Json/8.0.3": {
         "type": "package",
         "compile": {
           "lib/net45/Newtonsoft.Json.dll": {}
@@ -2563,16 +2563,16 @@
           "lib/net451/Microsoft.AspNet.WebUtilities.dll": {}
         }
       },
-      "Microsoft.Azure.DocumentDB/1.5.0": {
+      "Microsoft.Azure.DocumentDB/1.6.3": {
         "type": "package",
         "dependencies": {
-          "Newtonsoft.Json": "5.0.7"
+          "Newtonsoft.Json": "6.0.8"
         },
         "compile": {
-          "lib/net40/Microsoft.Azure.Documents.Client.dll": {}
+          "lib/net45/Microsoft.Azure.Documents.Client.dll": {}
         },
         "runtime": {
-          "lib/net40/Microsoft.Azure.Documents.Client.dll": {}
+          "lib/net45/Microsoft.Azure.Documents.Client.dll": {}
         }
       },
       "Microsoft.Azure.DocumentDB.TransientFaultHandling/1.2.0": {
@@ -2588,7 +2588,7 @@
           "lib/net45/Microsoft.Azure.Documents.Client.TransientFaultHandling.dll": {}
         }
       },
-      "Microsoft.Azure.Search/1.1.0": {
+      "Microsoft.Azure.Search/1.1.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Rest.ClientRuntime.Azure": "[2.5.2, 3.0.0)",
@@ -3206,7 +3206,7 @@
           "lib/dnx46/MVPStream.Models.dll": {}
         }
       },
-      "Newtonsoft.Json/7.0.1": {
+      "Newtonsoft.Json/8.0.3": {
         "type": "package",
         "compile": {
           "lib/net45/Newtonsoft.Json.dll": {}
@@ -4280,16 +4280,16 @@
           "lib/net451/Microsoft.AspNet.WebUtilities.dll": {}
         }
       },
-      "Microsoft.Azure.DocumentDB/1.5.0": {
+      "Microsoft.Azure.DocumentDB/1.6.3": {
         "type": "package",
         "dependencies": {
-          "Newtonsoft.Json": "5.0.7"
+          "Newtonsoft.Json": "6.0.8"
         },
         "compile": {
-          "lib/net40/Microsoft.Azure.Documents.Client.dll": {}
+          "lib/net45/Microsoft.Azure.Documents.Client.dll": {}
         },
         "runtime": {
-          "lib/net40/Microsoft.Azure.Documents.Client.dll": {}
+          "lib/net45/Microsoft.Azure.Documents.Client.dll": {}
         }
       },
       "Microsoft.Azure.DocumentDB.TransientFaultHandling/1.2.0": {
@@ -4305,7 +4305,7 @@
           "lib/net45/Microsoft.Azure.Documents.Client.TransientFaultHandling.dll": {}
         }
       },
-      "Microsoft.Azure.Search/1.1.0": {
+      "Microsoft.Azure.Search/1.1.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Rest.ClientRuntime.Azure": "[2.5.2, 3.0.0)",
@@ -4923,7 +4923,7 @@
           "lib/dnx46/MVPStream.Models.dll": {}
         }
       },
-      "Newtonsoft.Json/7.0.1": {
+      "Newtonsoft.Json/8.0.3": {
         "type": "package",
         "compile": {
           "lib/net45/Newtonsoft.Json.dll": {}
@@ -5753,14 +5753,17 @@
         "Microsoft.AspNet.WebUtilities.nuspec"
       ]
     },
-    "Microsoft.Azure.DocumentDB/1.5.0": {
+    "Microsoft.Azure.DocumentDB/1.6.3": {
       "type": "package",
-      "sha512": "34YdERyrxmf61gtwFVxtEzUBqS5Ynh3nMcPKYoZJK2itkkLRJcQlHEg4/C6pwabHSUIkNWU/EPbmPX8nZYojbw==",
+      "sha512": "tmh0Zs2faH2/UQk35331NwkdoyBrAWl7gnoR3nyT4PMw7LNoGmN71BGEqJ0FDHV+gotKLfwk2Nigj0UtFulEiQ==",
       "files": [
-        "lib/net40/Microsoft.Azure.Documents.Client.dll",
-        "lib/net40/Microsoft.Azure.Documents.Client.XML",
-        "Microsoft.Azure.DocumentDB.1.5.0.nupkg",
-        "Microsoft.Azure.DocumentDB.1.5.0.nupkg.sha512",
+        "build/Microsoft.Azure.DocumentDB.targets",
+        "build/native/DocumentDB.Spatial.Sql.dll",
+        "build/native/Microsoft.Azure.Documents.ServiceInterop.dll",
+        "lib/net45/Microsoft.Azure.Documents.Client.dll",
+        "lib/net45/Microsoft.Azure.Documents.Client.XML",
+        "Microsoft.Azure.DocumentDB.1.6.3.nupkg",
+        "Microsoft.Azure.DocumentDB.1.6.3.nupkg.sha512",
         "Microsoft.Azure.DocumentDB.nuspec"
       ]
     },
@@ -5775,16 +5778,16 @@
         "Microsoft.Azure.DocumentDB.TransientFaultHandling.nuspec"
       ]
     },
-    "Microsoft.Azure.Search/1.1.0": {
+    "Microsoft.Azure.Search/1.1.1": {
       "type": "package",
-      "sha512": "0d7Z2SDSaIfkCJKsqPPO1V9Unt9luA8exH+quKYNZCdOSUMgeeROv2FdIIPjn2xnDNPkiIRVbx2/jAq085FckQ==",
+      "sha512": "Y6TosKnNyxXl77B4A4HpbqEFqVEV2hCUL91IggjOsK6VxiknAjvHPQj8/qvpNOHx8ZMoxV4ya5KlC/Shcm1UDA==",
       "files": [
         "lib/net45/Microsoft.Azure.Search.dll",
         "lib/net45/Microsoft.Azure.Search.xml",
         "lib/portable-net403+win8+wpa81/Microsoft.Azure.Search.dll",
         "lib/portable-net403+win8+wpa81/Microsoft.Azure.Search.xml",
-        "Microsoft.Azure.Search.1.1.0.nupkg",
-        "Microsoft.Azure.Search.1.1.0.nupkg.sha512",
+        "Microsoft.Azure.Search.1.1.1.nupkg",
+        "Microsoft.Azure.Search.1.1.1.nupkg.sha512",
         "Microsoft.Azure.Search.nuspec"
       ]
     },
@@ -6326,9 +6329,9 @@
         "MVPStream.Models.nuspec"
       ]
     },
-    "Newtonsoft.Json/7.0.1": {
+    "Newtonsoft.Json/8.0.3": {
       "type": "package",
-      "sha512": "q3V4KLetMLnt1gpAVWgtXnHjKs0UG/RalBc29u2ZKxd5t5Ze4JBL5WiiYIklJyK/5CRiIiNwigVQUo0FgbsuWA==",
+      "sha512": "KGsYQdS2zLH+H8x2cZaSI7e+YZ4SFIbyy1YJQYl6GYBWjf5o4H1A68nxyq+WTyVSOJQ4GqS/DiPE+UseUizgMg==",
       "files": [
         "lib/net20/Newtonsoft.Json.dll",
         "lib/net20/Newtonsoft.Json.xml",
@@ -6342,8 +6345,8 @@
         "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.xml",
         "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll",
         "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.xml",
-        "Newtonsoft.Json.7.0.1.nupkg",
-        "Newtonsoft.Json.7.0.1.nupkg.sha512",
+        "Newtonsoft.Json.8.0.3.nupkg",
+        "Newtonsoft.Json.8.0.3.nupkg.sha512",
         "Newtonsoft.Json.nuspec",
         "tools/install.ps1"
       ]
@@ -7118,11 +7121,11 @@
       "Microsoft.AspNet.Server.Kestrel >= 1.0.0-rc1-final",
       "MVPStream.Models >= 2.0.0",
       "Microsoft.AspNet.WebApi.Client >= 5.2.3",
-      "Microsoft.Azure.DocumentDB >= 1.5.0",
+      "Microsoft.Azure.DocumentDB >= 1.6.3",
       "Microsoft.Azure.DocumentDB.TransientFaultHandling >= 1.2.0",
       "EnterpriseLibrary.TransientFaultHandling >= 6.0.1304",
-      "Newtonsoft.Json >= 7.0.1",
-      "Microsoft.Azure.Search >= 1.1.0"
+      "Newtonsoft.Json >= 8.0.3",
+      "Microsoft.Azure.Search >= 1.1.1"
     ],
     "DNX,Version=v4.6": []
   }
