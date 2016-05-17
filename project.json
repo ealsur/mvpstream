@@ -1,41 +1,36 @@
 {
     "version": "1.0.0-*",
     "webroot": "wwwroot",
-    "exclude": [
-        "wwwroot",
-        "bower_components",
-        "node_modules"
-    ],
     "authors": [
         "Matías Quaranta"
     ],
     "description": "MVPStream - Indice de conocimiento MVP",
-    "packExclude": [
-        "bower_components",
-        "node_modules"
-
-    ],
-    "compilationOptions": {
-    "warningsAsErrors": true
-  },
+    "exclude": "node_modules",  
+    "buildOptions": {
+        "warningsAsErrors": true,
+        "emitEntryPoint": true,
+        "preserveCompilationContext": true
+    },
+    /*https://github.com/aspnet/Announcements/issues/175*/
+     "runtimeOptions": {
+        "gcServer": false,
+        "gcConcurrent": true
+    },
     "dependencies": {
-        "Microsoft.AspNet.Mvc": "6.0.0-rc1-final",
-        "Microsoft.AspNet.Mvc.TagHelpers": "6.0.0-rc1-final",
-        "Microsoft.AspNet.Diagnostics":"1.0.0-rc1-final",
-        "Microsoft.AspNet.StaticFiles": "1.0.0-rc1-final",
-        "Microsoft.AspNet.Server.Kestrel": "1.0.0-rc1-final",   
-        "MVPStream.Models": "2.0.0",
+        "Microsoft.AspNetCore.Mvc": "1.0.0-rc2-final",
+        "Microsoft.AspNetCore.Diagnostics":"1.0.0-rc2-final",
+        "Microsoft.AspNetCore.StaticFiles": "1.0.0-rc2-final",
+        "Microsoft.AspNetCore.Server.Kestrel": "1.0.0-rc2-final",   
+        "MVPStream.Models": "2.0.2",
         "Microsoft.AspNet.WebApi.Client":"5.2.3",
         "Microsoft.Azure.DocumentDB":"1.5.0",
         "Microsoft.Azure.DocumentDB.TransientFaultHandling": "1.2.0",
         "EnterpriseLibrary.TransientFaultHandling": "6.0.1304.0",
-        "Newtonsoft.Json": "7.0.1",
-        "Microsoft.Azure.Search": "1.1.0"
-    },
-    "commands": {
-       "web": "Microsoft.AspNet.Server.Kestrel"
+        "Newtonsoft.Json": "8.0.3",
+        "Microsoft.Azure.Search": "1.1.0",
+        "Microsoft.NETCore.Platforms": "1.0.1-*"
     },
     "frameworks": {
-        "dnx46":{}
+        "net46":{}
     }
 }
