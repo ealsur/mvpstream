@@ -41,7 +41,6 @@ namespace MVPStream.Services
         {
             
             var sp = new SearchParameters();
-
             if (!string.IsNullOrEmpty(filter))
             {
                 sp.Filter = filter;
