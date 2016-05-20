@@ -7,9 +7,8 @@ var concat = require('gulp-concat');
 var ignore = require('gulp-ignore');
 var del = require('del');
 
-var project = require('./project.json');  
-var lib = project.webroot + '/dist'; 
-var content = project.webroot + '/Content';
+var lib = 'wwwroot/dist'; 
+var content = 'wwwroot/Content';
 
 /* LIMPIO LA CARPETA DE DESTINO */
 gulp.task('clean',function(done){
