@@ -49,6 +49,13 @@
 	"scripts": {
 	  "postpublish": "dotnet publish-iis --publish-folder %publish:OutputPath% --framework %publish:FullTargetFramework%"
 	},
+    "publishOptions": {
+    "include": [
+        "wwwroot",
+        "Views",
+        "web.config"
+        ]
+    },
     "frameworks": {
         "net461":{}
     }

@@ -15,7 +15,7 @@
           "lib/portable-net45+win+wp8/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.dll": {}
         }
       },
-      "Libuv/1.9.0-rc2-20896": {
+      "Libuv/1.9.0-rc2-20901": {
         "type": "package",
         "runtimeTargets": {
           "runtimes/debian-x64/native/libuv.so": {
@@ -612,7 +612,7 @@
       "Microsoft.AspNetCore.Server.Kestrel/1.0.0-rc2-final": {
         "type": "package",
         "dependencies": {
-          "Libuv": "1.9.0-rc2-20896",
+          "Libuv": "1.9.0-rc2-20901",
           "Microsoft.AspNetCore.Hosting": "1.0.0-rc2-final",
           "Microsoft.Extensions.Logging.Abstractions": "1.0.0-rc2-final",
           "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc2-final",
@@ -1850,11 +1850,11 @@
         "tools/install.ps1"
       ]
     },
-    "Libuv/1.9.0-rc2-20896": {
-      "sha512": "gJDGtSiobF+s1e8wzhukclNAPXLN40jx20kgcX27lDTbppUM2CImcV/1FJijnCln5fRwIoTCKTUUFofnge02tQ==",
+    "Libuv/1.9.0-rc2-20901": {
+      "sha512": "NW+YOuRDrlmGM6yjSRjJUqlHukDEqUTuZKVJvEzWV4LH8wEKqrmVcxTqAab87+UiQ3KOLsyaBJ3ZNdmzxFUTig==",
       "type": "package",
       "files": [
-        "Libuv.1.9.0-rc2-20896.nupkg.sha512",
+        "Libuv.1.9.0-rc2-20901.nupkg.sha512",
         "Libuv.nuspec",
         "runtimes/debian-x64/native/libuv.so",
         "runtimes/osx/native/libuv.dylib",
@@ -1950,7 +1950,7 @@
       ]
     },
     "Microsoft.AspNetCore.Diagnostics/1.0.0-rc2-final": {
-      "sha512": "qRVVuuIq6RmYultWuGJO0qboJgCdKcC/SPf6JVfZNs7Y9U0u5C3XLW7+/+HLPdXqYMi6AZdDtaM91+UDcyGvLA==",
+      "sha512": "tkTheYd1QfRQLxMv52leqiUDl5zPrIn/oRjzajITxOcZuKQKRSb8uLLF3cK9JiDoMVh/G6yCeglycDIhk8c0Kw==",
       "type": "package",
       "files": [
         "Microsoft.AspNetCore.Diagnostics.1.0.0-rc2-final.nupkg.sha512",
@@ -2100,7 +2100,7 @@
       ]
     },
     "Microsoft.AspNetCore.Mvc/1.0.0-rc2-final": {
-      "sha512": "1oCJYXFAbARbxdrBv76UYm9ohjUp1p6aTZ1Cb9mAZKPmGAge6ffe0AW5kjohjD4u+zW/6FvssLhocF8oSqEHhw==",
+      "sha512": "vzCC0/VzdxqaWidqconJFtScPGLiG+dIYzKgqCeJU884e3OujB3TPZGjzQNypZMBqLs5WX5sZA5l8PQC7OXYvg==",
       "type": "package",
       "files": [
         "Microsoft.AspNetCore.Mvc.1.0.0-rc2-final.nupkg.sha512",
@@ -2220,7 +2220,7 @@
       ]
     },
     "Microsoft.AspNetCore.Mvc.TagHelpers/1.0.0-rc2-final": {
-      "sha512": "yxyyJdzWQRMs7FYAyAg1JAVjUP9wRdjn7BEosgUPaB/V3zeKTwoyzFZ0y6veM1dsePupCkRKk0NKrtl2i9pzAA==",
+      "sha512": "bePjw8Jc/k6bha7XNv9H2LZHjsuPm0n1ujHcRnUsz9v4xlicW4yV3UhQ/DmplFPWNVHMa0y0BgN5kEhlNqpUcQ==",
       "type": "package",
       "files": [
         "Microsoft.AspNetCore.Mvc.TagHelpers.1.0.0-rc2-final.nupkg.sha512",
@@ -2304,7 +2304,7 @@
       ]
     },
     "Microsoft.AspNetCore.Server.Kestrel/1.0.0-rc2-final": {
-      "sha512": "67wELytbOUdJPCb/BuGqV+xjBkWYOvhIpYFeSzXlGNDBYKDN2ccJRBHjUw4BLPpbuvBy0eiULgs9lc7aalSWrQ==",
+      "sha512": "ojeLfBZ+H7uVImuzqErcNv8hN8Z8+k99jSl2U+cwEMddJXnzqjND20NlwNW/g4/3roLB3F3+6kYTy3wWMYFQCg==",
       "type": "package",
       "files": [
         "Microsoft.AspNetCore.Server.Kestrel.1.0.0-rc2-final.nupkg.sha512",
@@ -2316,7 +2316,7 @@
       ]
     },
     "Microsoft.AspNetCore.StaticFiles/1.0.0-rc2-final": {
-      "sha512": "sTOQfVrjuwX7Z9ny974EkviHavMuAgsBi4D98kV1Hjbd5RgkWvkovr62tERxpxOT+6T6zRg4VTrb1L7IWhVFpg==",
+      "sha512": "MOv6HHX1C/62ljMsl/MK9hlG+f/9k3+kR6CHHaf2gqTXMb3qOf3gfthiTQIESTh66JxC7ZcFVCKdNKuodlXsgA==",
       "type": "package",
       "files": [
         "Microsoft.AspNetCore.StaticFiles.1.0.0-rc2-final.nupkg.sha512",
