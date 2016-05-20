@@ -1,7 +1,7 @@
 ﻿using MVPStream.Models;
 using System;
 using System.Text;
-using Microsoft.AspNet.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using MVPStream.Services;
 using System.Xml;
 

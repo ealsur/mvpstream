@@ -1,5 +1,5 @@
 ﻿using MVPStream.Services;
-using Microsoft.AspNet.Mvc;
+using Microsoft.AspNetCore.Mvc;
 
 namespace MVPStream.Controllers
 {
