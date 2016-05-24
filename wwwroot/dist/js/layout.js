@@ -1,1 +1,1 @@
-!function(){componentHandler.registerUpgradedCallback("MaterialLayout",function(){new Layzr})}();
+!function(){componentHandler.registerUpgradedCallback("MaterialLayout",function(){new Layzr}),setTimeout(function(){document.querySelector(".chat").style.display=""},6e4)}();

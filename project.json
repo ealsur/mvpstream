@@ -19,13 +19,17 @@
     "buildOptions": {
         "warningsAsErrors": true,
         "emitEntryPoint": true,
-        "preserveCompilationContext": true
+        "preserveCompilationContext": true,
+        "compile": {
+            "exclude": ["node_modules"]
+        }
     },
     /*https://github.com/aspnet/Announcements/issues/175*/
      "runtimeOptions": {
-        "gcServer": false,
-        "gcConcurrent": true
+        "gcServer": true
     },
+    /*For Omnisharps sake*/
+    "exclude": ["node_modules"],
     "dependencies": {
         "Microsoft.AspNetCore.Mvc": "1.0.0-rc2-final",
         "Microsoft.AspNetCore.Diagnostics":"1.0.0-rc2-final",

@@ -234,8 +234,8 @@ footer.mdl-grid > div {
 }
 @media (min-width: 768px) {
   .chat{
-    position:relative;
-    top:-300px;
+    position:fixed;
+    bottom:0;
     right:0;
     width:302px;
     height:402px;
