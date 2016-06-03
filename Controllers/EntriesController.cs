@@ -5,6 +5,10 @@ namespace MVPStream.Controllers
 {
     public class EntriesController : Controller
     {
+        private readonly ISearchService _searchService;
+        public EntriesController(ISearchService searchService){
+            _searchService=searchService;
+        }
         [Route("busqueda")]
         public IActionResult Busqueda(string q, int page=1)
         {
@@ -12,7 +16,7 @@ namespace MVPStream.Controllers
             {
                 return RedirectToAction("Index", "Home");
             }
-            var model = EntriesService.GetModel(q, page);
+            var model = EntriesService.GetModel(_searchService,q, page);
             if(model.Cantidad==0)
             {
                 return View("~/Views/Error/Error404.cshtml");
@@ -27,7 +31,7 @@ namespace MVPStream.Controllers
             {
                 return RedirectToAction("Index", "Home");
             }
-            return View(EntriesService.GetSectionModel("Video", page));
+            return View(EntriesService.GetSectionModel(_searchService,"Video", page));
         }
 
         [Route("publicaciones")]
@@ -37,7 +41,7 @@ namespace MVPStream.Controllers
             {
                 return RedirectToAction("Index", "Home");
             }
-            return View(EntriesService.GetSectionModel("RSS", page));
+            return View(EntriesService.GetSectionModel(_searchService,"RSS", page));
         }
     }
 }

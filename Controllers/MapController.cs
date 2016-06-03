@@ -9,6 +9,10 @@ namespace MVPStream.Controllers
 {
     public class MapController : Controller
     {
+        private readonly ISearchService _searchService;
+        public MapController(ISearchService searchService){
+            _searchService=searchService;
+        }
         [Route("map")]
         [ResponseCache(Duration = 43200)]
         public IActionResult Index()
@@ -37,7 +41,7 @@ namespace MVPStream.Controllers
             using(var stream = new System.IO.MemoryStream())
             {
             const string baseUrl = "http://mvpstream.azurewebsites.net/";
-            var model = HomeService.GetModel();
+            var model = HomeService.GetModel(_searchService);
             var TextWriter = new XmlTextWriter(stream, Encoding.UTF8);
             TextWriter.WriteStartDocument();
         

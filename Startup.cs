@@ -2,8 +2,7 @@ using System.IO;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
-
-
+using MVPStream.Services;
 
 namespace MVPStream
 {
@@ -12,6 +11,7 @@ namespace MVPStream
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddSingleton<ISearchService>(x=>new SearchService());
         }
 
         public void Configure(IApplicationBuilder app)

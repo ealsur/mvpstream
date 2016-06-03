@@ -4,7 +4,7 @@ namespace MVPStream.Services
 {
     public static class EntriesService
     {
-        public static BusquedaViewModel GetModel(string query, int page)
+        public static BusquedaViewModel GetModel(ISearchService SearchService, string query, int page)
         {
             query = System.Uri.UnescapeDataString(query);
             var model = SearchService.SimpleSearch(query, 15, page);
@@ -17,7 +17,7 @@ namespace MVPStream.Services
             };
         }
 
-        public static BusquedaViewModel GetSectionModel(string section, int page)
+        public static BusquedaViewModel GetSectionModel(ISearchService SearchService, string section, int page)
         {
             var model = SearchService.SectionSearch(section, 24, page);
             return new BusquedaViewModel()

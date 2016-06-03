@@ -6,38 +6,46 @@ using System;
 
 namespace MVPStream.Services
 {
-    public static class SearchService
+    public interface ISearchService
+    {
+        SearchResults Latest(string tipo, int cantidad);
+        SearchResults FromMVP(string id, int cantidad, int page);
+        SearchResults SectionSearch(string section, int cantidad, int page);
+        SearchResults SimpleSearch(string query, int cantidad, int page);
+    }
+
+    public class SearchService:ISearchService
     {
 
-        static readonly SearchServiceClient client;
-        static readonly SearchIndexClient indexClient;
-        static SearchService()
+        private readonly SearchServiceClient client;
+        private readonly SearchIndexClient indexClient;
+        public SearchService()
         {
             client = new SearchServiceClient(AzureEndpoints.SearchAccount, new SearchCredentials(AzureEndpoints.SearchKey));
             indexClient = client.Indexes.GetClient("entries");
         }
 
-        public static SearchResults Latest(string tipo, int cantidad)
+        public SearchResults Latest(string tipo, int cantidad)
         {
             return SearchDocuments(string.Empty, string.Format("Tipo eq '{0}'", tipo), "Fecha desc", 1, cantidad);
         }
 
-        public static SearchResults FromMVP(string id, int cantidad, int page)
+        public SearchResults FromMVP(string id, int cantidad, int page)
         {
             return SearchDocuments(string.Empty, string.Format("PublisherId eq '{0}'", id), "Fecha desc", page, cantidad);
         }
 
-        public static SearchResults SectionSearch(string section, int cantidad, int page)
+        public SearchResults SectionSearch(string section, int cantidad, int page)
         {
             return SearchDocuments(string.Empty, string.Format("Tipo eq '{0}'", section), "Fecha desc", page, cantidad);
         }
 
-        public static SearchResults SimpleSearch(string query, int cantidad, int page)
+        public SearchResults SimpleSearch(string query, int cantidad, int page)
         {
             return SearchDocuments(query, string.Empty, string.Empty, page, cantidad);
         }
 
-        private static SearchResults SearchDocuments(string searchText, string filter, string orderBy, int page = 1, int pageSize = 10)
+        private SearchResults SearchDocuments(string searchText, string filter, string orderBy, int page = 1, int pageSize = 10)
         {
             
             var sp = new SearchParameters();
