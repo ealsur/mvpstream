@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="content-language" content="es">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="@(string.Join(", ",MVPStream.Models.Especialidades.All.Select(x=>x.GetNombre()).ToArray()))">
+    <meta name="keywords" content="@(string.Join(", ",MVPStream.Models.Data.Especialidades.All.Select(x=>x.GetNombre()).ToArray()))">
     <meta name="norton-safeweb-site-verification" content="j4sxt77z5r0bjdr0dtop1kxd9doxbh3j-ihyor4qov5-oeobeyovmwnrehhonoqsz51oubc1ltutqg91o4gxyi8libtccuj1dbe48-0arefktgmd8z0evfa93xb0biub" />
     @RenderSection("meta", required: false)
     <title>@ViewBag.Title</title>
@@ -48,7 +48,7 @@
       <div class="mdl-layout__drawer">
         <span class="mdl-layout-title"><a href="/"><img alt="MVPStream" src="@Url.Content("~/content/images/logo.png")"/></a></span>
         <nav class="mdl-navigation">
-            @foreach (var especialidad in MVPStream.Models.Especialidades.All)
+            @foreach (var especialidad in MVPStream.Models.Data.Especialidades.All)
             {
                 <a class="mdl-navigation__link" href="/busqueda?q=@System.Uri.EscapeDataString(especialidad.GetNombre())">@especialidad.GetNombre()</a>
             }

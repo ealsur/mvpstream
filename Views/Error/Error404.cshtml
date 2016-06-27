@@ -9,7 +9,7 @@
 <div class="container">
      <p>
             pero te <strong>recomiendo</strong> que pruebes con <br />
-            @foreach (var especialidad in MVPStream.Models.Especialidades.All)
+            @foreach (var especialidad in MVPStream.Models.Data.Especialidades.All)
             {
                 <a href="/busqueda?q=@System.Uri.EscapeUriString(especialidad.GetNombre())">@especialidad.GetNombre()</a>
             }
