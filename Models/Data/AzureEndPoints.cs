@@ -18,10 +18,10 @@ namespace MVPStream.Models.Data
         private string SearchKey;
         public AzureEndpoints(IConfigurationRoot configuration)
         {
-            DocumentDBUrl = configuration["ddburl"];
-            DocumentDBKey = configuration["ddbkey"];
-            SearchAccount = configuration["searchaccount"];
-            SearchKey = configuration["searchkey"];
+            DocumentDBUrl = configuration["APPSETTING_ddburl"];
+            DocumentDBKey = configuration["APPSETTING_ddbkey"];
+            SearchAccount = configuration["APPSETTING_searchaccount"];
+            SearchKey = configuration["APPSETTING_searchkey"];
         }
 
         public string GetDocumentDBUrl()
