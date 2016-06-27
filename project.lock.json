@@ -1221,15 +1221,6 @@
           }
         }
       },
-      "MVPStream.Models/2.0.2": {
-        "type": "package",
-        "compile": {
-          "lib/net46/MVPStream.Models.dll": {}
-        },
-        "runtime": {
-          "lib/net46/MVPStream.Models.dll": {}
-        }
-      },
       "Newtonsoft.Json/9.0.1-beta1": {
         "type": "package",
         "compile": {
@@ -2957,16 +2948,6 @@
         "lib/portable-net40+sl5+wp8+win8+wpa/ru/Microsoft.Spatial.resources.dll",
         "lib/portable-net40+sl5+wp8+win8+wpa/zh-Hans/Microsoft.Spatial.resources.dll",
         "lib/portable-net40+sl5+wp8+win8+wpa/zh-Hant/Microsoft.Spatial.resources.dll"
-      ]
-    },
-    "MVPStream.Models/2.0.2": {
-      "sha512": "67IlzdTlUp+iGoX4JyaUNIBrEbzRBgVQFHd35pDF3gk7C9vZPSXtbRWOUsfOyOGguGpMB0nL2YOPu4Axz23fRw==",
-      "type": "package",
-      "files": [
-        "MVPStream.Models.2.0.2.nupkg.sha512",
-        "MVPStream.Models.nuspec",
-        "lib/net46/MVPStream.Models.dll",
-        "lib/net46/MVPStream.Models.pdb"
       ]
     },
     "Newtonsoft.Json/9.0.1-beta1": {
@@ -5679,7 +5660,6 @@
   "projectFileDependencyGroups": {
     "": [
       "EnterpriseLibrary.TransientFaultHandling >= 6.0.1304",
-      "MVPStream.Models >= 2.0.2",
       "Microsoft.AspNet.WebApi.Client >= 5.2.3",
       "Microsoft.AspNetCore.Diagnostics >= 1.0.0",
       "Microsoft.AspNetCore.Mvc >= 1.0.0",
@@ -5689,6 +5669,7 @@
       "Microsoft.Azure.DocumentDB >= 1.7.0",
       "Microsoft.Azure.DocumentDB.TransientFaultHandling >= 1.2.0",
       "Microsoft.Azure.Search >= 1.1.1",
+      "Microsoft.Extensions.Configuration.EnvironmentVariables >= 1.0.0",
       "Newtonsoft.Json >= 9.0.1-beta1"
     ],
     ".NETFramework,Version=v4.6.1": []
