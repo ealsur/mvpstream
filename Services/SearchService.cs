@@ -3,6 +3,7 @@ using Microsoft.Azure.Search.Models;
 using MVPStream.Models;
 using System.Linq;
 using System;
+using MVPStream.Models.Data;
 
 namespace MVPStream.Services
 {
@@ -19,9 +20,9 @@ namespace MVPStream.Services
 
         private readonly SearchServiceClient client;
         private readonly SearchIndexClient indexClient;
-        public SearchService()
+        public SearchService(IAzureEndpoints AzureEndpoints)
         {
-            client = new SearchServiceClient(AzureEndpoints.SearchAccount, new SearchCredentials(AzureEndpoints.SearchKey));
+            client = new SearchServiceClient(AzureEndpoints.GetSearchAccount(), new SearchCredentials(AzureEndpoints.GetSearchKey()));
             indexClient = client.Indexes.GetClient("entries");
         }
 

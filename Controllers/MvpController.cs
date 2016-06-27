@@ -6,8 +6,10 @@ namespace MVPStream.Controllers
     public class MvpController : Controller
     {
         private readonly ISearchService _searchService;
-        public MvpController(ISearchService searchService){
+        private readonly IDocumentDB _documentDB;
+        public MvpController(ISearchService searchService, IDocumentDB documentDB){
             _searchService=searchService;
+            _documentDB=documentDB;
         }
         [Route("mvp/{id}")]
         public IActionResult Index(string id, int page = 1)
@@ -17,7 +19,7 @@ namespace MVPStream.Controllers
                 return RedirectToAction("Index", "Home");
             }
             
-            return View(MvpService.GetModel(_searchService,id, page));
+            return View(MvpService.GetModel(_searchService, _documentDB,id, page));
         }        
     }
 }

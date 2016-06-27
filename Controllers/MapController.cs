@@ -10,8 +10,10 @@ namespace MVPStream.Controllers
     public class MapController : Controller
     {
         private readonly ISearchService _searchService;
-        public MapController(ISearchService searchService){
+        private readonly IDocumentDB _documentDB;
+        public MapController(ISearchService searchService, IDocumentDB documentDB){
             _searchService=searchService;
+            _documentDB=documentDB;
         }
         [Route("map")]
         [ResponseCache(Duration = 43200)]
@@ -22,11 +24,11 @@ namespace MVPStream.Controllers
             xmlMap.Append("<url><loc>"+baseUrl+"</loc><lastmod>"+DateTime.Now.ToString("yyyy-MM-dd")+"</lastmod><changefreq>daily</changefreq></url>");
             xmlMap.Append("<url><loc>" + baseUrl + "publicaciones</loc><lastmod>" + DateTime.Now.ToString("yyyy-MM-dd") + "</lastmod><changefreq>daily</changefreq></url>");
             xmlMap.Append("<url><loc>" + baseUrl + "videos</loc><lastmod>" + DateTime.Now.ToString("yyyy-MM-dd") + "</lastmod><changefreq>daily</changefreq></url>");
-            foreach (var especialidad in MVPStream.Models.Especialidades.All)
+            foreach (var especialidad in MVPStream.Models.Data.Especialidades.All)
             {
                 xmlMap.Append("<url><loc>" + baseUrl + "busqueda?q="+System.Uri.EscapeDataString(especialidad.GetNombre())+"</loc><lastmod>" + DateTime.Now.ToString("yyyy-MM-dd") + "</lastmod><changefreq>daily</changefreq></url>");
             }
-            foreach (var publisher in DocumentDB.GetAllPublishers().Result)
+            foreach (var publisher in _documentDB.GetAllPublishers())
             {
                 xmlMap.Append("<url><loc>" + baseUrl + "mvp/" + publisher.id+ "</loc><lastmod>" + DateTime.Now.ToString("yyyy-MM-dd") + "</lastmod><changefreq>daily</changefreq></url>");
             }
