@@ -24,30 +24,30 @@
             "exclude": ["node_modules"]
         }
     },
-    /*https://github.com/aspnet/Announcements/issues/175*/
-     "runtimeOptions": {
-        "gcServer": true
+    "runtimeOptions": {
+        "configProperties": {
+            "System.GC.Server": true
+        }
     },
     /*For Omnisharps sake*/
     "exclude": ["node_modules"],
     "dependencies": {
-        "Microsoft.AspNetCore.Mvc": "1.0.0-rc2-final",
-        "Microsoft.AspNetCore.Diagnostics":"1.0.0-rc2-final",
-        "Microsoft.AspNetCore.StaticFiles": "1.0.0-rc2-final",
-        "Microsoft.AspNetCore.Server.Kestrel": "1.0.0-rc2-final",   
+        "Microsoft.AspNetCore.Mvc": "1.0.0",
+        "Microsoft.AspNetCore.Diagnostics":"1.0.0",
+        "Microsoft.AspNetCore.StaticFiles": "1.0.0",
+        "Microsoft.AspNetCore.Server.Kestrel": "1.0.0",   
         "MVPStream.Models": "2.0.2",
         "Microsoft.AspNet.WebApi.Client":"5.2.3",
         "Microsoft.Azure.DocumentDB":"1.7.0",
         "Microsoft.Azure.DocumentDB.TransientFaultHandling": "1.2.0",
         "EnterpriseLibrary.TransientFaultHandling": "6.0.1304.0",
-        "Newtonsoft.Json": "8.0.3",
+        "Newtonsoft.Json": "9.0.1-beta1",
         "Microsoft.Azure.Search": "1.1.1",
-        "Microsoft.AspNetCore.Server.IISIntegration": "1.0.0-rc2-final"
+        "Microsoft.AspNetCore.Server.IISIntegration": "1.0.0"
     },
 	"tools": {
 	  "Microsoft.AspNetCore.Server.IISIntegration.Tools": {
-		"version": "1.0.0-*",
-		"imports": "portable-net45+wp80+win8+wpa81+dnxcore50"
+		"version": "1.0.0-preview2-final"
 	  }
 	},
 	"scripts": {
