@@ -33,6 +33,7 @@ namespace MVPStream
         {
             app.UseStaticFiles();
             app.UseStatusCodePagesWithRedirects("~/error/error{0}");
+            app.UseDeveloperExceptionPage();
              app.UseMvc(routes =>
              {
                          routes.MapRoute("default", "{controller=Home}/{action=Index}/{id?}");
@@ -43,8 +44,8 @@ namespace MVPStream
         {
             var host = new WebHostBuilder()
                 .UseKestrel()
-				.UseIISIntegration()
-                .UseContentRoot(Directory.GetCurrentDirectory())
+				.UseContentRoot(Directory.GetCurrentDirectory())
+                .UseIISIntegration()
                 .UseStartup<Startup>()
                 .Build();
 
