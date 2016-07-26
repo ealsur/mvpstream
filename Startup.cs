@@ -18,11 +18,20 @@ namespace MVPStream
             var builder = new ConfigurationBuilder()
                 .AddEnvironmentVariables();
             Configuration = builder.Build();
+            
+            if (env.IsDevelopment())
+            {
+                builder.AddApplicationInsightsSettings(developerMode: true);
+            }
+            else{
+                builder.AddApplicationInsightsSettings(instrumentationKey: Configuration["APPSETTING_appinsights"]);
+            }
         }
 
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddApplicationInsightsTelemetry(Configuration);
             var azureEndpointService = new AzureEndpoints(Configuration);
             services.AddSingleton<ISearchService>(x=>new SearchService(azureEndpointService));
             services.AddSingleton<IDocumentDB>(x=>new DocumentDB(azureEndpointService));
@@ -33,10 +42,12 @@ namespace MVPStream
         {
             app.UseStaticFiles();
             app.UseStatusCodePagesWithRedirects("~/error/error{0}");
+            app.UseApplicationInsightsRequestTelemetry();
             app.UseMvc(routes =>
             {
                         routes.MapRoute("default", "{controller=Home}/{action=Index}/{id?}");
             });
+            app.UseApplicationInsightsExceptionTelemetry();
         }
         
         public static void Main(string[] args)
