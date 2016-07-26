@@ -23,9 +23,6 @@ namespace MVPStream
             {
                 builder.AddApplicationInsightsSettings(developerMode: true);
             }
-            else{
-                builder.AddApplicationInsightsSettings(instrumentationKey: Configuration["APPSETTING_appinsights"]);
-            }
         }
 
         public void ConfigureServices(IServiceCollection services)
