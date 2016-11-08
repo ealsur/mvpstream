@@ -19,7 +19,7 @@ namespace MVPStream.Services
     {
 
         private readonly SearchServiceClient client;
-        private readonly SearchIndexClient indexClient;
+        private readonly ISearchIndexClient indexClient;
         public SearchService(IAzureEndpoints AzureEndpoints)
         {
             client = new SearchServiceClient(AzureEndpoints.GetSearchAccount(), new SearchCredentials(AzureEndpoints.GetSearchKey()));

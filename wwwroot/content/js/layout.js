@@ -2,7 +2,7 @@
 	componentHandler.registerUpgradedCallback("MaterialLayout",function(){
 		var layzr = new Layzr();	
 	});	
-	setTimeout(function() {
+	/*setTimeout(function() {
 		document.querySelector('.chat').style.display='';
-	}, 60000);
+	}, 60000);*/
 })();

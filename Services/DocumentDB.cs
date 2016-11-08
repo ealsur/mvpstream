@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Azure.Documents.Client;
-using Microsoft.Azure.Documents.Client.TransientFaultHandling;
-using Microsoft.Azure.Documents.Client.TransientFaultHandling.Strategies;
 using Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling;
 using MVPStream.Models.Data;
 
@@ -17,12 +15,10 @@ namespace MVPStream.Services
     public class DocumentDB:IDocumentDB
     {
 
-        private IReliableReadWriteDocumentClient dbClient;
+        private DocumentClient dbClient;
 
         public DocumentDB(IAzureEndpoints AzureEndpoints){
-            var documentClient = new DocumentClient(new Uri(AzureEndpoints.GetDocumentDBUrl()), AzureEndpoints.GetDocumentDBKey());
-                var documentRetryStrategy = new DocumentDbRetryStrategy(RetryStrategy.DefaultExponential) {FastFirstRetry = true};
-			    dbClient = documentClient.AsReliable(documentRetryStrategy);
+            dbClient = new DocumentClient(new Uri(AzureEndpoints.GetDocumentDBUrl()), AzureEndpoints.GetDocumentDBKey());
         }
 
 
