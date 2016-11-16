@@ -43,7 +43,8 @@
 		"Microsoft.Azure.Search": "2.0.5-preview",
 		"Microsoft.AspNetCore.Server.IISIntegration": "1.1.0",
 		"Microsoft.Extensions.Configuration.EnvironmentVariables": "1.1.0",
-		"Microsoft.ApplicationInsights.AspNetCore": "1.0.2"
+		"Microsoft.ApplicationInsights.AspNetCore": "1.0.2",
+		"Microsoft.AspNetCore.Mvc.Razor.ViewCompilation.Design": "1.1.0-preview4-final"
 	},
 	"tools": {
 		"Microsoft.AspNetCore.Server.IISIntegration.Tools": {
