@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Azure.Documents.Client;
-using Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling;
 using MVPStream.Models.Data;
 
 namespace MVPStream.Services

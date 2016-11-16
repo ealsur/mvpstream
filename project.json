@@ -28,38 +28,44 @@
             "System.GC.Server": true
         }
     },
-    /*For Omnisharps sake*/
-    "exclude": ["node_modules"],
-    "dependencies": {
-        "Microsoft.AspNetCore.Mvc": "1.0.1",
-        "Microsoft.AspNetCore.Diagnostics":"1.0.0",
-        "Microsoft.AspNetCore.StaticFiles": "1.0.0",
-        "Microsoft.AspNetCore.Server.Kestrel": "1.0.1",   
-        "Microsoft.AspNet.WebApi.Client":"5.2.3",
-        "Microsoft.Azure.DocumentDB":"1.10.0",
-        "EnterpriseLibrary.TransientFaultHandling": "6.0.1304.0",
-        "Newtonsoft.Json": "9.0.1",
-        "Microsoft.Azure.Search": "2.0.5-preview",
-        "Microsoft.AspNetCore.Server.IISIntegration": "1.0.0",
-        "Microsoft.Extensions.Configuration.EnvironmentVariables": "1.0.0",
-        "Microsoft.ApplicationInsights.AspNetCore": "1.0.2"
-    },
+	"dependencies": {
+		"Microsoft.NETCore.App": {
+			"version": "1.1.0",
+			"type": "platform"
+		},
+		"Microsoft.AspNetCore.Mvc": "1.1.0",
+		"Microsoft.AspNetCore.Diagnostics": "1.1.0",
+		"Microsoft.AspNetCore.StaticFiles": "1.1.0",
+		"Microsoft.AspNetCore.Server.Kestrel": "1.1.0",
+		"Microsoft.AspNet.WebApi.Client": "5.2.3",
+		"Microsoft.Azure.DocumentDB.Core": "0.1.0-preview",
+		"Newtonsoft.Json": "9.0.1",
+		"Microsoft.Azure.Search": "2.0.5-preview",
+		"Microsoft.AspNetCore.Server.IISIntegration": "1.1.0",
+		"Microsoft.Extensions.Configuration.EnvironmentVariables": "1.1.0",
+		"Microsoft.ApplicationInsights.AspNetCore": "1.0.2"
+	},
 	"tools": {
-	  "Microsoft.AspNetCore.Server.IISIntegration.Tools": {
-		"version": "1.0.0-preview2-final"
-	  }
+		"Microsoft.AspNetCore.Server.IISIntegration.Tools": {
+			"version": "1.0.0-preview2-final"
+		},
+		"Microsoft.AspNetCore.Mvc.Razor.ViewCompilation.Tools": "1.1.0-preview4-final"
 	},
   "scripts": {
-    "postpublish": [ "dotnet publish-iis --publish-folder %publish:OutputPath% --framework %publish:FullTargetFramework%" ]
+			"postpublish": [
+				"dotnet razor-precompile --configuration %publish:Configuration% --framework %publish:TargetFramework% --output-path %publish:OutputPath% %publish:ProjectPath%",
+				"dotnet publish-iis --publish-folder %publish:OutputPath% --framework %publish:FullTargetFramework%"
+			]
   },
     "publishOptions": {
     "include": [
         "wwwroot",
-        "Views",
         "web.config"
         ]
     },
-    "frameworks": {
-        "net461":{}
-    }
+	"frameworks": {
+		"netcoreapp1.1": {
+			"imports": [ "dotnet5.6", "portable-net451+win8" ]
+		}
+	}
 }
