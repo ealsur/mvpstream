@@ -65,10 +65,11 @@
 			]
   },
     "publishOptions": {
-    "include": [
-        "wwwroot",
-        "web.config"
-        ]
+					"include": [
+						"wwwroot",
+						"appsettings.json",
+						"web.config"
+					]
     },
 	"frameworks": {
 		"netcoreapp1.1": {

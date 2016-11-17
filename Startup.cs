@@ -15,8 +15,10 @@ namespace MVPStream
         public IConfigurationRoot Configuration { get; }
         public Startup(IHostingEnvironment env)
         {
-            var builder = new ConfigurationBuilder()
-                .AddEnvironmentVariables();
+			var builder = new ConfigurationBuilder()
+				 .SetBasePath(env.ContentRootPath)
+				 .AddJsonFile("appsettings.json")
+				.AddEnvironmentVariables();
             Configuration = builder.Build();
             
             if (env.IsDevelopment())
@@ -52,8 +54,8 @@ namespace MVPStream
         {
             var host = new WebHostBuilder()
                 .UseKestrel()
-				.UseContentRoot(Directory.GetCurrentDirectory())
-                .UseAzureAppServices()
+				.UseAzureAppServices()
+				.UseContentRoot(Directory.GetCurrentDirectory())                
                 .UseStartup<Startup>()
                 .Build();
 
