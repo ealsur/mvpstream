@@ -40,11 +40,12 @@ namespace MVPStream
             app.UseStaticFiles();
             app.UseStatusCodePagesWithRedirects("~/error/error{0}");
             app.UseApplicationInsightsRequestTelemetry();
-            app.UseMvc(routes =>
+			app.UseApplicationInsightsExceptionTelemetry();
+			app.UseMvc(routes =>
             {
                         routes.MapRoute("default", "{controller=Home}/{action=Index}/{id?}");
             });
-            app.UseApplicationInsightsExceptionTelemetry();
+            
         }
         
         public static void Main(string[] args)
