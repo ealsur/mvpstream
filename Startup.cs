@@ -6,12 +6,13 @@ using Microsoft.Extensions.DependencyInjection;
 using MVPStream.Models;
 using MVPStream.Models.Data;
 using MVPStream.Services;
+using Microsoft.AspNetCore.Rewrite;
 
 namespace MVPStream
 {
     public class Startup
     {
-        
+        private readonly bool isDevelopment = false;
         public IConfigurationRoot Configuration { get; }
         public Startup(IHostingEnvironment env)
         {
@@ -23,6 +24,7 @@ namespace MVPStream
             
             if (env.IsDevelopment())
             {
+                isDevelopment = true;
                 builder.AddApplicationInsightsSettings(developerMode: true);
             }
         }
@@ -39,6 +41,10 @@ namespace MVPStream
 
         public void Configure(IApplicationBuilder app)
         {
+            if(!isDevelopment){
+                app.UseRewriter(new RewriteOptions().AddRedirectToHttps(301));
+            }
+
             app.UseStaticFiles();
             app.UseStatusCodePagesWithRedirects("~/error/error{0}");
             app.UseApplicationInsightsRequestTelemetry();
